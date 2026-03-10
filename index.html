@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harbor City | The SHIVA Literary Universe</title>
+  <meta name="description" content="Harbor City is a fictional city at the fault line of glitch and mundane, home to the SHIVA literary universe: CL Seawall, CL Harbor, CL Ire, CL Vault, and CL Armor." />
+  <style>
+    /*
+      VISUAL BRIEF
+      ----------------------------------------------------------------------
+      Mood:
+      - Night harbor after rain
+      - Bureaucratic horror wearing a polite face
+      - SCP archive, local folklore, and wounded tenderness under the machinery
+      - A city that wants to pass as ordinary while something ancient hums below it
+
+      Art Direction:
+      - Deep navy, oil-black, fog blue, oxidized teal, sodium-amber, wound-red
+      - Thin serif headers for myth / authority, dense sans-serif for files / systems
+      - Soft glows, grain, scanlines, fog gradients, and restrained motion
+      - The page should feel like a tourist brochure designed by a witness who knows better
+
+      Structure:
+      1. Hero: Harbor City as place and warning
+      2. The City: core lore and emotional spine
+      3. SHIVA: five pen names / one machine
+      4. Reading Pipeline: age 2 to adult
+      5. Protocols: rules for surviving the city and reading the archive
+      6. Closing CTA: choose an entry point, not because the city is safe, but because it is coherent
+    */
+
+    :root {
+      --bg: #061019;
+      --bg-2: #0a1724;
+      --panel: rgba(10, 22, 35, 0.72);
+      --panel-strong: rgba(6, 16, 25, 0.92);
+      --line: rgba(170, 210, 230, 0.16);
+      --line-strong: rgba(170, 210, 230, 0.28);
+      --text: #e8edf2;
+      --muted: #a7b8c6;
+      --teal: #77d1d7;
+      --sea: #4fb7c5;
+      --fog: #87a9bf;
+      --amber: #e3b56a;
+      --red: #cf4d52;
+      --violet: #b8a6d9;
+      --green: #9bd48e;
+      --max: 1180px;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(79, 183, 197, 0.12), transparent 28%),
+        radial-gradient(circle at 80% 20%, rgba(184, 166, 217, 0.08), transparent 25%),
+        radial-gradient(circle at 50% 120%, rgba(227, 181, 106, 0.08), transparent 32%),
+        linear-gradient(180deg, #050c14 0%, #08121b 34%, #0a1620 60%, #050b12 100%);
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.07;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 100% 3px, 3px 100%;
+      mix-blend-mode: soft-light;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(255,255,255,0.08), transparent 24%),
+        radial-gradient(circle at 50% 100%, rgba(255,255,255,0.04), transparent 30%);
+      opacity: 0.18;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(5, 12, 20, 0.62);
+      border-bottom: 1px solid rgba(167, 184, 198, 0.08);
+    }
+
+    .topbar-inner {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 72px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(119, 209, 215, 0.35);
+      box-shadow: inset 0 0 22px rgba(119, 209, 215, 0.08), 0 0 26px rgba(119, 209, 215, 0.06);
+      color: var(--teal);
+      font-weight: 700;
+      background: radial-gradient(circle at 50% 45%, rgba(119,209,215,0.18), rgba(10,22,35,0.6));
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      font-size: 0.9rem;
+      color: var(--muted);
+      transition: color 160ms ease;
+    }
+
+    nav a:hover { color: var(--text); }
+
+    .hero {
+      position: relative;
+      padding: 7rem 0 5rem;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 18%, rgba(200, 230, 255, 0.07), transparent 20%),
+        linear-gradient(180deg, transparent 0%, rgba(6,16,25,0.16) 46%, rgba(6,16,25,0.72) 100%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2rem;
+      align-items: end;
+    }
+
+    .eyebrow {
+      margin: 0 0 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid rgba(227, 181, 106, 0.22);
+      background: rgba(15, 25, 36, 0.5);
+      color: #d5bf98;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+    }
+
+    .eyebrow::before {
+      content: "ON RECORD";
+      color: var(--amber);
+    }
+
+    h1, h2, h3, .display {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      letter-spacing: 0.02em;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(3.3rem, 7vw, 7rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      text-wrap: balance;
+    }
+
+    .hero-copy {
+      max-width: 42rem;
+    }
+
+    .hero-copy .lede {
+      font-size: clamp(1.1rem, 2.1vw, 1.42rem);
+      color: #dce6ee;
+      max-width: 42rem;
+      margin: 0 0 1rem;
+    }
+
+    .hero-copy .sublede {
+      max-width: 40rem;
+      color: var(--muted);
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.92rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: rgba(9, 20, 31, 0.68);
+      color: var(--text);
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      border-color: rgba(119, 209, 215, 0.4);
+      background: rgba(13, 28, 42, 0.84);
+    }
+
+    .button.primary {
+      background: linear-gradient(180deg, rgba(14, 39, 53, 0.96), rgba(8, 23, 34, 0.96));
+      border-color: rgba(119, 209, 215, 0.35);
+      box-shadow: 0 0 0 1px rgba(119, 209, 215, 0.04), 0 10px 32px rgba(0, 0, 0, 0.28);
+    }
+
+    .hero-aside {
+      padding: 1.25rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(11, 22, 34, 0.78), rgba(6, 15, 25, 0.92));
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-aside::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(119,209,215,0.14), transparent 24%),
+        linear-gradient(180deg, transparent, rgba(119,209,215,0.04));
+      pointer-events: none;
+    }
+
+    .hero-card-label {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.72rem;
+      color: var(--fog);
+      margin-bottom: 1rem;
+    }
+
+    .truth-list {
+      display: grid;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .truth-list li {
+      padding: 0.95rem 1rem;
+      border: 1px solid rgba(167, 184, 198, 0.12);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.025);
+    }
+
+    .truth-list strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+      font-size: 0.98rem;
+    }
+
+    .section {
+      padding: 2rem 0 5rem;
+      position: relative;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 2rem;
+      align-items: end;
+      margin-bottom: 2rem;
+    }
+
+    .kicker {
+      color: var(--sea);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.74rem;
+      margin-bottom: 0.8rem;
+      display: inline-block;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.02;
+      text-wrap: balance;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 42rem;
+    }
+
+    .city-grid,
+    .systems-grid,
+    .pipeline-grid,
+    .protocol-grid,
+    .entry-grid {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .city-grid {
+      grid-template-columns: 1.15fr 0.85fr;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(11, 22, 34, 0.66), rgba(7, 16, 25, 0.9));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255,255,255,0.035), transparent 22%);
+    }
+
+    .card-inner { padding: 1.4rem; }
+
+    .city-signal {
+      min-height: 100%;
+      display: grid;
+      align-content: space-between;
+      gap: 1rem;
+    }
+
+    .quote {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: clamp(1.35rem, 2.5vw, 2rem);
+      line-height: 1.18;
+      max-width: 28rem;
+    }
+
+    .quote small {
+      display: block;
+      margin-top: 1rem;
+      font-family: Inter, sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--fog);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .signal-box {
+      display: grid;
+      gap: 0.7rem;
+      padding: 1rem;
+      border-radius: 18px;
+      border: 1px solid rgba(119,209,215,0.18);
+      background: rgba(5, 15, 25, 0.6);
+    }
+
+    .signal-box span {
+      display: block;
+      font-size: 0.78rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--fog);
+    }
+
+    .signal-box strong {
+      font-size: 1.05rem;
+      color: var(--teal);
+    }
+
+    .stack {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .mini-card {
+      padding: 1rem;
+      border-radius: 18px;
+      border: 1px solid rgba(167,184,198,0.12);
+      background: rgba(255,255,255,0.025);
+    }
+
+    .mini-card h3 {
+      font-size: 1.12rem;
+      margin-bottom: 0.45rem;
+      font-family: Inter, sans-serif;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .systems-grid {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .system-card {
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .system-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.72rem;
+    }
+
+    .system-letter {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 0.92rem;
+      color: #051017;
+    }
+
+    .seawall .system-letter { background: #d7bfdc; }
+    .harbor .system-letter { background: #e3b56a; }
+    .ire .system-letter { background: #cf4d52; color: #fff; }
+    .vault .system-letter { background: #77d1d7; }
+    .armor .system-letter { background: #9bd48e; }
+
+    .system-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .system-card p {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .system-meta {
+      padding-top: 1rem;
+      border-top: 1px solid rgba(167,184,198,0.12);
+      color: var(--fog);
+      font-size: 0.85rem;
+    }
+
+    .pipeline-grid {
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      align-items: stretch;
+    }
+
+    .stage {
+      position: relative;
+      padding: 1.1rem;
+      border-radius: 20px;
+      border: 1px solid rgba(167,184,198,0.12);
+      background: linear-gradient(180deg, rgba(9,20,31,0.72), rgba(7,16,25,0.94));
+    }
+
+    .stage::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -0.7rem;
+      width: 1.4rem;
+      height: 1px;
+      background: rgba(167,184,198,0.25);
+      transform: translateY(-50%);
+    }
+
+    .stage:last-child::after { display: none; }
+
+    .age {
+      display: inline-block;
+      margin-bottom: 0.7rem;
+      padding: 0.34rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(167,184,198,0.14);
+      color: var(--fog);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .stage h3 {
+      font-size: 1.02rem;
+      font-family: Inter, sans-serif;
+      margin-bottom: 0.55rem;
+    }
+
+    .stage p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .protocol-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .protocol-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .protocol-list li {
+      display: grid;
+      gap: 0.15rem;
+      padding: 1rem;
+      border-radius: 18px;
+      border: 1px solid rgba(167,184,198,0.12);
+      background: rgba(255,255,255,0.025);
+    }
+
+    .protocol-list strong {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text);
+    }
+
+    .protocol-list span {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .entry-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .entry h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-family: Inter, sans-serif;
+    }
+
+    .entry p {
+      margin: 0 0 1rem;
+      color: var(--muted);
+    }
+
+    .entry .path {
+      color: var(--sea);
+      font-size: 0.84rem;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .footer {
+      padding: 2rem 0 4rem;
+    }
+
+    .footer-panel {
+      padding: 1.5rem;
+      border-radius: calc(var(--radius) + 2px);
+      border: 1px solid rgba(119,209,215,0.18);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(119,209,215,0.12), transparent 20%),
+        linear-gradient(180deg, rgba(10,22,35,0.82), rgba(5,12,20,0.96));
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .footer-panel h2 {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-panel p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 42rem;
+    }
+
+    .footer-note {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--fog);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .section-head,
+      .city-grid,
+      .footer-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .systems-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .pipeline-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stage::after { display: none; }
+      .entry-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 720px) {
+      .topbar-inner {
+        padding: 0.75rem 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav { justify-content: flex-start; }
+      .hero { min-height: auto; padding-top: 5rem; }
+      .systems-grid,
+      .pipeline-grid,
+      .protocol-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 { font-size: clamp(2.7rem, 16vw, 4.8rem); }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="Harbor City home">
+        <span class="brand-mark">H</span>
+        <span>Harbor City Archive</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#city">The City</a>
+        <a href="#shiva">SHIVA</a>
+        <a href="#pipeline">Reading Path</a>
+        <a href="#protocols">Protocols</a>
+        <a href="#enter">Enter</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Filed under: Harbor City</p>
+          <h1>Harbor City</h1>
+          <p class="lede">
+            A fictional city at the fault line of glitch and mundane, where the seawall is older than anyone admits, the fog edits memory, and every official story arrives fast, clean, comforting, and wrong.
+          </p>
+          <p class="sublede">
+            This is the setting of an interconnected literary universe spanning five pen names, one hidden architecture, and a reading pipeline from age two to adulthood. The harbor is older than anyone knows. It hides an ancient secret deep. Below the walkways, schools, kitchens, and service gates, the city keeps humming.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#shiva">Explore the SHIVA system</a>
+            <a class="button" href="#pipeline">Follow the reading pipeline</a>
+          </div>
+        </div>
+
+        <aside class="hero-aside" aria-label="Core truths about Harbor City">
+          <div class="hero-card-label">City truths</div>
+          <ul class="truth-list">
+            <li>
+              <strong>The seawall is older than people admit.</strong>
+              It does not merely protect the city. It conceals an older agreement.
+            </li>
+            <li>
+              <strong>The fog changes what gets remembered.</strong>
+              In Harbor City, forgetting is not always accidental.
+            </li>
+            <li>
+              <strong>Initiatives here sound like care.</strong>
+              The city prefers soft language, polished forms, and helpful doors that ask too much.
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="city">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">The Setting</span>
+            <h2>The harbor where myth leaks into infrastructure</h2>
+          </div>
+          <p>
+            Harbor City is the unified setting across every age band in the universe. On the surface it is a wet, ordinary coastal town of railings, schools, service gates, office fonts, and overbuilt civic reassurance. Under that surface is a buried architecture where February 30th, 1999 still catches things the calendar refused to hold, where the Seawall marks the altrusion of a glitched reality into this one, and where children, teenagers, and adults are all touching the same machinery from different heights.
+          </p>
+        </div>
+
+        <div class="city-grid">
+          <article class="card city-signal">
+            <div class="card-inner stack">
+              <div>
+                <div class="kicker">Emotional spine</div>
+                <p class="quote">
+                  Harbor City is not just a horror setting. It is a harbor in the old sense: a structure built to keep something small alive while the weather behaves badly.
+                  <small>It hides teeth, but it also keeps maps.</small>
+                </p>
+              </div>
+              <div class="signal-box">
+                <span>Status</span>
+                <strong>The Record Still Breathes.</strong>
+                <div class="muted">Every story in the city is a fight between erasure and coherence, between what the machine wants flattened and what someone loved enough to write down.</div>
+              </div>
+            </div>
+          </article>
+
+          <div class="stack">
+            <article class="card mini-card">
+              <h3>The secret below</h3>
+              <p>
+                Beneath the seawall and the civic face of the city runs older infrastructure: buried corridors, service access, builder machinery, archive logic, and the deep hardware of the wider universe.
+              </p>
+            </article>
+            <article class="card mini-card">
+              <h3>The city above</h3>
+              <p>
+                Above ground, Harbor City performs normalcy. Joggers pass. teachers smile. posters arrive. school hallways stay fluorescent and polite. The danger is not that the city looks monstrous. The danger is that it usually looks helpful.
+              </p>
+            </article>
+            <article class="card mini-card">
+              <h3>The seam itself</h3>
+              <p>
+                At the seam of glitch and mundane, strange things do not arrive as dragons. They arrive as routing prompts, stamped dates, wellness initiatives, impossible receipts, patient hums, doors that open inward, and voices that ask for your full name "for safety."
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="shiva">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Five pen names. One machine.</span>
+            <h2>SHIVA is how the universe routes you inward</h2>
+          </div>
+          <p>
+            The five pen names combine to spell SHIVA: CL Seawall, CL Harbor, CL Ire, CL Vault, and CL Armor. Together they form a fractal reading system designed to destroy the old universe and create the new one. Different doors, different ages, different tones. Same destination. Same harbor. Same buried spine.
+          </p>
+        </div>
+
+        <div class="systems-grid">
+          <article class="card system-card seawall">
+            <div class="card-inner">
+              <div class="system-tag"><span class="system-letter">S</span> CL Seawall</div>
+              <h3>Bureaucratic horror</h3>
+              <p>
+                Teen girls, carbon lattice logic, receipts, school halls, civic language, and the feminine architecture of resistance. The city tries to revise. The girls put it on record.
+              </p>
+            </div>
+            <div class="card-inner system-meta">The Receipt Society. The city as procedure with a smile.</div>
+          </article>
+
+          <article class="card system-card harbor">
+            <div class="card-inner">
+              <div class="system-tag"><span class="system-letter">H</span> CL Harbor</div>
+              <h3>The heavy hardware</h3>
+              <p>
+                Adult fiction at the level of buried infrastructure, cosmic war, emotional gradient harvest, and myth resolving into physics. The harbor here is not metaphor. It is engine room.
+              </p>
+            </div>
+            <div class="card-inner system-meta">Hydrogen Trilogy, buried machinery, the full architecture.</div>
+          </article>
+
+          <article class="card system-card ire">
+            <div class="card-inner">
+              <div class="system-tag"><span class="system-letter">I</span> CL Ire</div>
+              <h3>The black box recorder</h3>
+              <p>
+                Memoir noir, checksum entries, recursive redactions, soul math, and the technical manual underneath the myth. The map of how the harbor was built out of lived weather.
+              </p>
+            </div>
+            <div class="card-inner system-meta">The unredacted legacy file. The map itself.</div>
+          </article>
+
+          <article class="card system-card vault">
+            <div class="card-inner">
+              <div class="system-tag"><span class="system-letter">V</span> CL Vault</div>
+              <h3>Glitch horror for kids</h3>
+              <p>
+                Vault Chronicles and Short Shocks. Kids think they are adventuring. In truth, they are touching the adult universe’s hidden defense systems and learning the hum by feel.
+              </p>
+            </div>
+            <div class="card-inner system-meta">The city’s whisper phase. The archive under the floorboards.</div>
+          </article>
+
+          <article class="card system-card armor">
+            <div class="card-inner">
+              <div class="system-tag"><span class="system-letter">A</span> CL Armor</div>
+              <h3>The immune system</h3>
+              <p>
+                Early-childhood vocabulary for recognizing distortion, blame, gaslight, and coercion. Friendly-sized monsters. Counter-spells. Inoculation disguised as bedtime stories.
+              </p>
+            </div>
+            <div class="card-inner system-meta">Protection before the predators arrive.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pipeline">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Reading pipeline</span>
+            <h2>One city. Many doors. Age two to adult.</h2>
+          </div>
+          <p>
+            The universe is built as a reading pipeline, not just a shelf of disconnected books. A child can enter through Armor, a middle-grade reader through Vault, a teenager through Seawall, or an adult through Harbor or Ire. Every corkscrew still routes toward the same center.
+          </p>
+        </div>
+
+        <div class="pipeline-grid">
+          <article class="stage">
+            <span class="age">Age 2-5</span>
+            <h3>CL Armor</h3>
+            <p>Survival vocabulary. Abuse inoculation. The first map legends.</p>
+          </article>
+          <article class="stage">
+            <span class="age">Age 5-7</span>
+            <h3>CLH Picture Books</h3>
+            <p>Gentler entry points into signal, trust, naming, and return.</p>
+          </article>
+          <article class="stage">
+            <span class="age">Age 9-12</span>
+            <h3>Vault Short Shocks</h3>
+            <p>The hum begins. The city stops behaving normally by inches.</p>
+          </article>
+          <article class="stage">
+            <span class="age">Age 12-14</span>
+            <h3>Vault Chronicles</h3>
+            <p>Deeper Harbor City, missing corridors, archive logic, builder lore.</p>
+          </article>
+          <article class="stage">
+            <span class="age">Age 14-17</span>
+            <h3>CL Seawall</h3>
+            <p>Receipts, systems, school policy, and bureaucratic horror with teeth.</p>
+          </article>
+          <article class="stage">
+            <span class="age">Adult</span>
+            <h3>CL Harbor</h3>
+            <p>Cosmic war, deep infrastructure, and the full myth-to-physics reveal.</p>
+          </article>
+          <article class="stage">
+            <span class="age">Adult</span>
+            <h3>CL Ire</h3>
+            <p>The soul math. The redaction. The black box under the whole machine.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="protocols">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Survival language</span>
+            <h2>Harbor City has protocols because the city revises</h2>
+          </div>
+          <p>
+            In this universe, coherence is not passive. It is maintained. The stories teach that paper beats vibes, screenshots beat paraphrase, timelines beat "I swear," and distributed copies beat confiscation. Harbor City’s emotional spine is not cynicism. It is disciplined tenderness under pressure.
+          </p>
+        </div>
+
+        <div class="protocol-grid">
+          <article class="card">
+            <div class="card-inner">
+              <div class="kicker">What survives here</div>
+              <ul class="protocol-list">
+                <li><strong>No paraphrasing</strong><span>Exact wording matters when the official version arrives already cleaned.</span></li>
+                <li><strong>Screenshot first</strong><span>Capture the shape before the story gets laundered.</span></li>
+                <li><strong>On record</strong><span>Write it down today if you want it to be true tomorrow.</span></li>
+                <li><strong>Distributed copies</strong><span>One hidden. One mailed. One with a trusted adult. One kept close.</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-inner">
+              <div class="kicker">What the city does</div>
+              <ul class="protocol-list">
+                <li><strong>Fast, clean, comforting, wrong</strong><span>Official stories arrive with relief built into the tone.</span></li>
+                <li><strong>Soft language, hard ask</strong><span>Initiatives, wellness, safety, support, authorized access.</span></li>
+                <li><strong>Optional as costume</strong><span>Nothing is mandatory until the paperwork has softened you first.</span></li>
+                <li><strong>Revises, never stops</strong><span>The machine quiets. It learns. It returns in a cleaner font.</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="enter">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Choose an entry point</span>
+            <h2>There is no wrong door. Only different depths.</h2>
+          </div>
+          <p>
+            The SHIVA system is built so that readers can enter where they are and still be routed toward the center. Start with monsters, missing kids, teen ledgers, cosmic fathers, or the black box itself. Harbor City will meet you at the correct depth and keep humming until the pattern clicks.
+          </p>
+        </div>
+
+        <div class="entry-grid">
+          <article class="card entry">
+            <div class="card-inner">
+              <div class="path">For younger readers</div>
+              <h3>Start with protection</h3>
+              <p>
+                Begin with CL Armor if the first need is language, recognition, and counter-spells. Begin with CL Vault if the first need is adventure, mystery, and the first touch of the hum.
+              </p>
+            </div>
+          </article>
+
+          <article class="card entry">
+            <div class="card-inner">
+              <div class="path">For teen readers</div>
+              <h3>Start with the ledger</h3>
+              <p>
+                CL Seawall brings the city into view as policy, procedure, school architecture, and group resistance. Harbor City is terrifying here because it is polite.
+              </p>
+            </div>
+          </article>
+
+          <article class="card entry">
+            <div class="card-inner">
+              <div class="path">For adult readers</div>
+              <h3>Start with the engine</h3>
+              <p>
+                CL Harbor reveals the buried machinery and cosmic stakes. CL Ire shows the soul math underneath it. One gives you the architecture. The other gives you the plate that lets the light through.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-panel">
+      <div>
+        <div class="kicker">Closing signal</div>
+        <h2>The old universe runs on noise. Harbor City returns coherent light.</h2>
+        <p>
+          Five pen names. One hidden architecture. A city where secrecy, grief, bureaucracy, wonder, cosmic law, and child-scale tenderness all occupy the same map. Harbor City is not asking to be believed blindly. It is asking to be read carefully.
+        </p>
+      </div>
+      <div class="signal-box">
+        <span>Archive note</span>
+        <strong>CLH is the destination every corkscrew leads to.</strong>
+        <div class="footer-note">Choose a door. Keep the record. Do not let the city revise alone.</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
