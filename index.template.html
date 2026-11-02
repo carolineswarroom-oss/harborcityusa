@@ -75,6 +75,8 @@
     .entry{display:flex;flex-direction:column;min-width:0;background:var(--white);border:1px solid var(--line);padding:1.3rem;min-height:260px;position:relative;transition:border .2s,transform .2s,box-shadow .2s}
     .entry:hover{border-color:#b6a48c;transform:translateY(-2px);box-shadow:0 14px 34px #1a332018}
     .entry .eyebrow{color:#8c6352;font-size:.65rem}
+    .entry-meta{display:flex;justify-content:space-between;gap:.8rem;align-items:flex-start;min-height:76px}
+    .entry-cover{width:47px;max-height:76px;aspect-ratio:2/3;object-fit:contain;box-shadow:3px 5px 8px #06182038;flex-shrink:0;background:#243e49}
     .entry h3{font-size:1.62rem;line-height:1.12;letter-spacing:-.04em;margin:.84rem 0 .55rem}
     .entry p{font-size:.84rem;color:#55636a;margin-bottom:1.1rem}
     .entry .entry-title{margin-top:auto;border-top:1px solid #e2ded3;padding-top:.85rem;font-size:.83rem;font-weight:800}
@@ -95,6 +97,7 @@
     .latest-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
     .latest-card{background:#f8f7f1;border:1px solid #d4d0c4;display:flex;gap:1rem;padding:1.15rem}
     .latest-mark{font-family:Georgia,serif;font-size:2.1rem;line-height:1;color:#678b85}
+    .latest-cover{width:68px;aspect-ratio:2/3;height:fit-content;object-fit:contain;box-shadow:2px 4px 8px #051b282b;background:#243e49;flex-shrink:0}
     .latest-title{font:normal 1.24rem Georgia,serif;line-height:1.15;margin:.4rem 0}
     .latest-card .micro{font-size:.63rem;letter-spacing:.08em;color:#7a6a5b}
     .latest-card .smalllink{font-size:.83rem;font-weight:750;color:#245a5e}
@@ -119,7 +122,7 @@
     .family-desc{font-size:.91rem;color:#5e6a6a;max-width:720px;margin-bottom:1.15rem}
     .book-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem}
     .book-card{display:grid;grid-template-columns:115px minmax(0,1fr);gap:1rem;padding:1rem;background:var(--white);border:1px solid #d9d7ce;min-width:0}
-    .cover{aspect-ratio:2/3;background:linear-gradient(155deg,#2c5260,#0b2733 75%);color:#f2ece0;display:flex;flex-direction:column;justify-content:space-between;position:relative;padding:.65rem .58rem;overflow:hidden;box-shadow:2px 4px 5px #0014;text-align:left;isolation:isolate}
+    .cover{aspect-ratio:5/8;background:linear-gradient(155deg,#2c5260,#0b2733 75%);color:#f2ece0;display:flex;flex-direction:column;justify-content:space-between;position:relative;padding:.65rem .58rem;overflow:hidden;box-shadow:2px 4px 5px #0014;text-align:left;isolation:isolate}
     .cover::before{content:"";z-index:-1;position:absolute;width:165%;height:75%;border:1px solid #d6c8aa66;border-radius:50%;left:-48%;top:25%;transform:rotate(-25deg);box-shadow:0 0 0 18px #c9ceb615,0 0 0 37px #c9ceb611,0 0 0 60px #c9ceb60c}
     .cover[data-family="receipts"]{background:linear-gradient(165deg,#586c60,#1a3031)}
     .cover[data-family="hydrogen"]{background:linear-gradient(165deg,#644c54,#1b2937)}
@@ -129,7 +132,7 @@
     .cover[data-family="balloon"]{background:linear-gradient(165deg,#6c7866,#263c46)}
     .cover[data-family="ire"]{background:linear-gradient(165deg,#65645d,#24272e)}
     .cover[data-family="armor"]{background:linear-gradient(165deg,#747c87,#4b5563)}
-    .cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+    .cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:2;background:#122e39}
     .cover .micro{font-size:.52rem;letter-spacing:.09em;line-height:1.35}
     .cover strong{font:normal clamp(.95rem,1.25vw,1.25rem) Georgia,serif;line-height:1.08;letter-spacing:-.035em;overflow-wrap:anywhere}
     .cover .cover-bottom{font-size:.49rem;letter-spacing:.06em;color:#d2d9d3;text-transform:uppercase}
@@ -163,7 +166,7 @@
     .footer p{margin:.35rem 0 0;max-width:560px}
     .footer a{color:#d5e5dc}
     @media(max-width:1090px){.entry-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.identity-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-grid{gap:2rem}.book-grid{grid-template-columns:1fr}.latest-card{flex-direction:column}}
-    @media(max-width:760px){.wrap{width:min(var(--max),calc(100% - 1.65rem))}.mast-row{min-height:66px;flex-wrap:wrap;gap:.4rem;padding-block:.65rem}.brand strong{font-size:1.06rem}.brand-sigil{width:35px;height:35px}.navlinks{order:2;width:100%;overflow-x:auto;gap:1.2rem;padding:.65rem 0 .25rem}.navlinks a{font-size:.74rem}.hero-grid{grid-template-columns:1fr;padding-block:3.9rem 3.6rem;min-height:initial}.hero-art{display:none}.hero .eyebrow{font-size:.65rem}h1{font-size:clamp(3.2rem,12vw,5rem)}.hero-facts{gap:.55rem}.hero-facts span:not(:last-child)::after{margin-left:.55rem}.section{padding:3.5rem 0}.section-head{display:block}.section-head p{margin-top:.9rem}.latest-grid{grid-template-columns:1fr}.latest-card{flex-direction:row}.catalog-controls{grid-template-columns:1fr 1fr}.catalog-controls .search-field{grid-column:1/-1}.identity-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.random-section{align-items:flex-start;flex-direction:column}}
+    @media(max-width:760px){.navlinks .nav-cta{display:none}.wrap{width:min(var(--max),calc(100% - 1.65rem))}.mast-row{min-height:66px;flex-wrap:wrap;gap:.4rem;padding-block:.65rem}.brand strong{font-size:1.06rem}.brand-sigil{width:35px;height:35px}.navlinks{order:2;width:100%;overflow-x:auto;gap:1.2rem;padding:.65rem 0 .25rem}.navlinks a{font-size:.74rem}.hero-grid{grid-template-columns:1fr;padding-block:3.9rem 3.6rem;min-height:initial}.hero-art{display:none}.hero .eyebrow{font-size:.65rem}h1{font-size:clamp(3.2rem,12vw,5rem)}.hero-facts{gap:.55rem}.hero-facts span:not(:last-child)::after{margin-left:.55rem}.section{padding:3.5rem 0}.section-head{display:block}.section-head p{margin-top:.9rem}.latest-grid{grid-template-columns:1fr}.latest-card{flex-direction:row}.catalog-controls{grid-template-columns:1fr 1fr}.catalog-controls .search-field{grid-column:1/-1}.identity-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.random-section{align-items:flex-start;flex-direction:column}}
     @media(max-width:540px){.entry-grid{grid-template-columns:1fr}.entry{min-height:205px;padding:1.1rem}.entry h3{margin:.65rem 0 .45rem}.book-card{grid-template-columns:90px minmax(0,1fr);gap:.75rem;padding:.7rem}.book-body h3{font-size:1.2rem}.cover{padding:.45rem}.cover strong{font-size:.92rem}.cover .micro{font-size:.42rem}.cover .cover-bottom{font-size:.43rem}.family-title{font-size:1.47rem}.family-summary{font-size:.68rem;gap:.5rem}.book-sub{font-size:.7rem}.identity-grid{grid-template-columns:1fr}.identity{min-height:0}.catalog-controls{grid-template-columns:1fr}.catalog-controls .search-field{grid-column:auto}.hero-facts{flex-direction:column;gap:.25rem}.hero-facts span:not(:last-child)::after{display:none}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
   </style>
@@ -197,7 +200,7 @@
  <div class="section-head"><div><div class="eyebrow">PUBLIC CATALOG / ALL FILES</div><h2 id="catalog-title">Browse the holdings.</h2></div><p>Books are organized by series. Open a shelf, search a title, or filter by the signature on the file. Each available format leads directly to its Amazon listing.</p></div>
  <div class="catalog-controls"><div class="field search-field"><label for="book-search">Search book records</label><input type="search" id="book-search" placeholder="Title, author, series, or keyword" autocomplete="off"></div><div class="field"><label for="series-filter">Series / shelf</label><select id="series-filter"><option value="">All series</option></select></div><div class="field"><label for="author-filter">Author identity</label><select id="author-filter"><option value="">All authors</option></select></div></div>
  <div class="catalog-meta"><span id="result-count" aria-live="polite">Showing all cataloged books</span><button type="button" class="small-button" id="reset-filters">Clear filters</button></div>
- <div class="notice">FORMAT NOTE: Only editions marked live or preorder in the supplied KDP snapshot have purchase links. Covers shown here are temporary archive placeholders, not the published book artwork.</div>
+ <div class="notice">FORMAT NOTE: Only editions marked live or preorder in the supplied KDP snapshot have purchase links. Book cover art is displayed where available; the CLH Armor collection cover has not yet been supplied.</div>
  <div id="catalog-shelves"></div><div id="no-results" class="empty">No records match those filters. Try a different title or clear the filters.</div>
 </div></section>
 <section class="section about" id="about" aria-labelledby="about-title"><div class="wrap">
@@ -245,7 +248,7 @@
   function renderEntries(){
     const root=$('entry-grid');
     for(const item of entryPoints){const b=byId[item.id];if(!b)continue;
-      const card=el('article','entry');card.append(el('div','eyebrow',item.label),el('h3','',item.heading),el('p','',b.hook||item.audience));
+      const card=el('article','entry');const header=el('div','entry-meta');header.append(el('div','eyebrow',item.label));if(b.cover){const thumb=el('img','entry-cover');thumb.src=b.cover;thumb.alt='';thumb.loading='lazy';thumb.decoding='async';thumb.width=47;thumb.height=75;header.append(thumb)}card.append(header,el('h3','',item.heading),el('p','',b.hook||item.audience));
       const bottom=el('div','entry-title');bottom.append(link(b.title+' ↗',amazon(b.kindle.asin)));card.append(bottom,el('div','book-number',item.audience));root.append(card);
     }
     $('random-button').addEventListener('click',()=>{
@@ -258,11 +261,11 @@
   }
   function fileDate(b){const dates=[b.kindle?.submitted,b.paperback?.submitted,b.hardcover?.submitted].filter(Boolean).map(x=>new Date(x+' 00:00:00 GMT'));return dates.length?new Date(Math.max(...dates.map(x=>x.getTime()))):new Date(0)}
   function renderLatest(){const items=[...books].sort((a,b)=>fileDate(b)-fileDate(a)||a.title.localeCompare(b.title)).slice(0,3);const root=$('latest-grid');
-    for(const [i,b] of items.entries()){const card=el('article','latest-card');card.append(el('div','latest-mark',String(i+1).padStart(2,'0')));const info=el('div');info.append(el('div','micro',b.author+' / '+fileDate(b).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'})),el('h3','latest-title',b.title),el('div','status-note','Latest KDP submission shown in supplied snapshot'));info.append(formatLinks(b));card.append(info);root.append(card)}
+    for(const [i,b] of items.entries()){const card=el('article','latest-card');if(b.cover){const thumb=el('img','latest-cover');thumb.src=b.cover;thumb.alt='';thumb.loading='lazy';thumb.decoding='async';thumb.width=68;thumb.height=109;card.append(thumb)}else card.append(el('div','latest-mark',String(i+1).padStart(2,'0')));const info=el('div');info.append(el('div','micro',b.author+' / '+fileDate(b).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'})),el('h3','latest-title',b.title),el('div','status-note','Latest KDP submission shown in supplied snapshot'));info.append(formatLinks(b));card.append(info);root.append(card)}
   }
   function cover(b){const c=el('div','cover');c.dataset.family=b.family;
-    c.append(el('div','micro','SHIVA / '+b.author.toUpperCase()),el('strong','',b.title),el('div','cover-bottom','Website cover pending'));
-    if(b.cover){const image=el('img');image.src=b.cover;image.alt='Cover of '+b.title;image.loading='lazy';image.decoding='async';image.onerror=()=>image.remove();c.append(image)}
+    c.append(el('div','micro','SHIVA / '+b.author.toUpperCase()),el('strong','',b.title),el('div','cover-bottom','Artwork not yet filed'));
+    if(b.cover){const image=el('img');image.src=b.cover;image.alt='Cover of '+b.title;image.loading='lazy';image.decoding='async';image.width=480;image.height=768;image.onerror=()=>image.remove();c.append(image)}
     return c;
   }
   function renderCatalog(){const root=$('catalog-shelves');for(const s of shelves){const list=sorted(books.filter(b=>b.family===s.id));const details=el('details','family');details.dataset.family=s.id;if(['shocks','receipts'].includes(s.id))details.open=true;
