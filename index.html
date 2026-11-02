@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071a22">
+  <meta name="description" content="Enter the SHIVA Literary Universe through Harbor City Archives. Find your first book, explore the series, and open the record on Amazon.">
+  <meta property="og:title" content="Harbor City Archives | The Record Breathes">
+  <meta property="og:description" content="Five author identities. One interconnected literary universe. Find the right door in.">
+  <title>Harbor City Archives | The Record Breathes</title>
+  <style>
+    :root { color-scheme: light; --ink:#102a33; --deep:#071a22; --navy:#0b2630; --navy-2:#103540; --paper:#f3f0e8; --paper-2:#eae5d9; --white:#fffefa; --muted:#566770; --line:#d4d0c4; --aqua:#89c3bd; --orange:#d4a168; --rust:#a66d55; --focus:#ffca73; --max:1210px; }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:6rem}
+    body{margin:0;color:var(--ink);background:var(--paper);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.53;-webkit-font-smoothing:antialiased}
+    button,input,select{font:inherit}
+    a{color:inherit}
+    a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+    button{cursor:pointer}
+    .wrap{width:min(var(--max),calc(100% - 2.4rem));margin-inline:auto}
+    .eyebrow,.mono,.archive-num,.micro,.badge,.record-id,.book-number{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+    .eyebrow{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700}
+    .muted{color:var(--muted)}
+    .skip{position:absolute;transform:translateY(-200%);background:var(--white);z-index:50;padding:.7rem 1rem}
+    .skip:focus{transform:none}
+    .mast{position:sticky;top:0;z-index:30;border-bottom:1px solid #2b4752;background:rgba(7,26,34,.97);color:#ecf0e9;backdrop-filter:blur(12px)}
+    .mast-row{display:flex;align-items:center;min-height:74px;justify-content:space-between;gap:1.6rem}
+    .brand{display:flex;align-items:center;gap:.85rem;min-width:0;text-decoration:none}
+    .brand-sigil{width:41px;height:41px;border:1px solid #87aea8;border-radius:50%;display:grid;place-items:center;flex-shrink:0;color:#9bcac5;font-family:Georgia,serif;font-size:1.5rem}
+    .brand-text{line-height:1.12;display:flex;flex-direction:column;gap:.27rem}
+    .brand strong{font-family:Georgia,"Times New Roman",serif;font-size:1.22rem;font-weight:normal;letter-spacing:.04em;white-space:nowrap}
+    .brand small{font-size:.57rem;letter-spacing:.16em;text-transform:uppercase;color:#9fbcbf;font-weight:700}
+    .navlinks{display:flex;gap:1.3rem;align-items:center;white-space:nowrap}
+    .navlinks a{text-decoration:none;font-size:.82rem;font-weight:700;letter-spacing:.04em;color:#d3e1dd}
+    .navlinks a:hover{color:white;text-decoration:underline;text-underline-offset:.35rem}
+    .navlinks .nav-cta{padding:.63rem .96rem;background:var(--orange);color:#15262c;border-radius:3px}
+    .navlinks .nav-cta:hover{text-decoration:none;background:#f2be82}
+    .hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 69% 21%,#1f4a56 0%,transparent 43%),linear-gradient(160deg,#0c2832 0%,#071a22 76%);color:#f4f3ed}
+    .hero::before{content:"";position:absolute;inset:0;opacity:.15;pointer-events:none;background-image:repeating-linear-gradient(0deg,transparent,transparent 38px,#84b0aa 39px,transparent 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,#84b0aa 40px,transparent 41px);mask-image:linear-gradient(90deg,transparent,black)}
+    .hero::after{content:"";position:absolute;inset:auto 0 0;height:90px;opacity:.26;background:repeating-linear-gradient(-12deg,transparent 0 54px,#769e9a 55px,transparent 56px);pointer-events:none}
+    .hero-grid{position:relative;z-index:1;min-height:550px;padding-block:5.3rem 5.2rem;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,6rem);align-items:center}
+    .hero .eyebrow{color:var(--aqua);display:inline-flex;align-items:center;gap:.8rem}
+    .hero .eyebrow::before{content:"";width:21px;height:1px;background:currentColor}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:normal}
+    h1{font-size:clamp(3.3rem,7.4vw,6.9rem);line-height:.98;letter-spacing:-.06em;margin:.9rem 0 1.45rem;max-width:660px}
+    .hero-lede{font-size:clamp(1.08rem,1.8vw,1.3rem);line-height:1.65;max-width:590px;color:#d8e5e3}
+    .hero-sub{font-size:.94rem;color:#b6c9cb;max-width:560px;margin-bottom:1.7rem}
+    .btn-row{display:flex;flex-wrap:wrap;gap:.68rem}
+    .button{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:.65rem;border-radius:3px;padding:.82rem 1.12rem;border:1px solid transparent;font-size:.86rem;font-weight:750;text-decoration:none;transition:background .18s,transform .18s}
+    .button:hover{transform:translateY(-1px)}
+    .button-primary{background:var(--orange);color:#13272d}.button-primary:hover{background:#efbb80}
+    .button-outline{color:#f4f4ed;border-color:#77999e;background:rgba(11,37,47,.55)}.button-outline:hover{background:#204753}
+    .button-paper{border:1px solid #b6b4a8;color:var(--ink);background:transparent}.button-paper:hover{background:#e8e7df}
+    .hero-facts{display:flex;gap:1.1rem;flex-wrap:wrap;color:#a8c4c2;border-top:1px solid #35505a;margin-top:2.1rem;padding-top:1.05rem;font-size:.76rem;letter-spacing:.035em}
+    .hero-facts span:not(:last-child)::after{content:"/";margin-left:1.1rem;color:#607b7e}
+    .hero-art{position:relative;width:100%;max-width:410px;margin-left:auto;transform:rotate(2deg)}
+    .hero-art::before{content:"";position:absolute;inset:14px -13px -15px 16px;border:1px solid #627d7c;transform:rotate(-5deg);background:#163a45}
+    .file-sheet{position:relative;background:#e8e4d7;color:#233943;min-height:402px;padding:1.4rem 1.55rem 1.2rem;box-shadow:18px 25px 50px #0005;border:1px solid #f8f5ea}
+    .sheet-row{display:flex;justify-content:space-between;gap:1rem;font-size:.62rem;font-weight:800;letter-spacing:.11em;border-bottom:1px solid #aeb8b5;padding-bottom:1rem}
+    .sheet-title{font-family:Georgia,serif;font-size:2.2rem;line-height:1;margin-top:1.4rem;letter-spacing:-.055em}
+    .sheet-sub{font-size:.76rem;letter-spacing:.13em;color:#677877;text-transform:uppercase;margin:.6rem 0 1rem}
+    .sheet-figure{border:1px solid #acb7b2;background:#d9e1db;overflow:hidden}
+    .sheet-figure svg{display:block;width:100%;height:auto}
+    .sheet-foot{display:flex;align-items:center;justify-content:space-between;gap:.6rem;margin-top:1rem;color:#526665;font-size:.67rem;line-height:1.4}
+    .sheet-stamp{color:#954b42;border:3px double currentColor;padding:.3rem .45rem;transform:rotate(-9deg);font-weight:900;letter-spacing:.11em;font-size:.65rem}
+    .section{padding:clamp(3.6rem,7vw,6rem) 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:2rem;margin-bottom:1.85rem}
+    .section-head .eyebrow{color:#8f5e41}
+    h2{font-size:clamp(2.25rem,4.5vw,3.8rem);line-height:1.08;letter-spacing:-.055em;margin:.4rem 0 0}
+    .section-head p{max-width:430px;color:var(--muted);font-size:.96rem;margin:0}
+    .rule{border:none;height:1px;background:var(--line);margin:0}
+    .notice{padding:.92rem 1.15rem;background:#e6e2d6;border-left:3px solid var(--rust);font-size:.87rem;color:#485b60;margin-bottom:1.7rem}
+    .entry-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+    .entry{display:flex;flex-direction:column;min-width:0;background:var(--white);border:1px solid var(--line);padding:1.3rem;min-height:260px;position:relative;transition:border .2s,transform .2s,box-shadow .2s}
+    .entry:hover{border-color:#b6a48c;transform:translateY(-2px);box-shadow:0 14px 34px #1a332018}
+    .entry .eyebrow{color:#8c6352;font-size:.65rem}
+    .entry h3{font-size:1.62rem;line-height:1.12;letter-spacing:-.04em;margin:.84rem 0 .55rem}
+    .entry p{font-size:.84rem;color:#55636a;margin-bottom:1.1rem}
+    .entry .entry-title{margin-top:auto;border-top:1px solid #e2ded3;padding-top:.85rem;font-size:.83rem;font-weight:800}
+    .entry a{color:#1c5b61;text-decoration:underline;text-underline-offset:3px}
+    .entry .book-number{color:#8c6352;font-size:.64rem;margin-top:.45rem}
+    .random-section{display:flex;gap:1.3rem;align-items:center;justify-content:space-between;margin-top:1.25rem;padding:1.2rem 1.5rem;background:#e4e2d8;border:1px dashed #adb4ab}
+    .random-section strong{font-size:.97rem}.random-section p{margin:.25rem 0 0;color:#53636a;font-size:.83rem}
+    .random-result{display:none;border-left:3px solid #749a98;padding:.5rem 0 .5rem .85rem;margin-top:1rem;font-size:.9rem}
+    .random-result.visible{display:block}
+    .random-result a{color:#16565b;font-weight:700}
+    .series-strip{background:#dfe5df;border-block:1px solid #cad5ce;padding:2.4rem 0}
+    .series-strip .eyebrow{color:#516f6a;margin-bottom:.95rem}
+    .series-list{display:flex;flex-wrap:wrap;gap:.5rem}
+    .series-link{text-decoration:none;display:inline-flex;gap:.55rem;align-items:center;background:#f8f8f2;border:1px solid #becdc5;border-radius:2px;padding:.63rem .85rem;font-size:.82rem;font-weight:750;color:#24434c;transition:background .17s}
+    .series-link:hover{background:#fff}
+    .series-link span{font:700 .68rem ui-monospace,monospace;color:#71827b}
+    .latest{background:#eae7de}
+    .latest-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+    .latest-card{background:#f8f7f1;border:1px solid #d4d0c4;display:flex;gap:1rem;padding:1.15rem}
+    .latest-mark{font-family:Georgia,serif;font-size:2.1rem;line-height:1;color:#678b85}
+    .latest-title{font:normal 1.24rem Georgia,serif;line-height:1.15;margin:.4rem 0}
+    .latest-card .micro{font-size:.63rem;letter-spacing:.08em;color:#7a6a5b}
+    .latest-card .smalllink{font-size:.83rem;font-weight:750;color:#245a5e}
+    .latest-card .status-note{font-size:.74rem;color:#596a6d;margin:.5rem 0}
+    .catalog{background:var(--paper)}
+    .catalog-controls{display:grid;grid-template-columns:2fr 1fr 1fr;gap:.8rem;margin-bottom:.8rem}
+    .field label{display:block;font-size:.69rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.38rem;color:#5d6767}
+    input[type="search"],select{width:100%;border:1px solid #b9c0b8;border-radius:3px;background:#fffefa;color:#1b333b;padding:.78rem .82rem;min-height:47px}
+    input::placeholder{color:#6c7c7c}
+    .catalog-meta{display:flex;align-items:center;justify-content:space-between;gap:1rem;font-size:.83rem;color:#58696c;margin:1rem 0 1.3rem}
+    .small-button{background:none;border:0;color:#235c60;text-decoration:underline;padding:.3rem 0;font-weight:700;font-size:.81rem}
+    .family{border-top:1px solid #bac5bf;margin-top:.95rem}
+    .family:last-child{border-bottom:1px solid #bac5bf}
+    .family summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:1rem;padding:1.25rem .4rem;user-select:none}
+    .family summary::-webkit-details-marker{display:none}
+    .family summary:hover .family-title{color:#17646b}
+    .family-title{font:normal clamp(1.5rem,2.3vw,2.15rem) Georgia,serif;letter-spacing:-.04em}
+    .family-summary{margin-left:auto;display:flex;align-items:center;gap:.9rem;color:#546b6c;white-space:nowrap;font-size:.76rem}
+    .family summary .plus{font:normal 1.5rem Georgia,serif;color:#487473}
+    .family[open] summary .plus{transform:rotate(45deg)}
+    .family-body{padding:.1rem .25rem 1.75rem}
+    .family-desc{font-size:.91rem;color:#5e6a6a;max-width:720px;margin-bottom:1.15rem}
+    .book-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem}
+    .book-card{display:grid;grid-template-columns:115px minmax(0,1fr);gap:1rem;padding:1rem;background:var(--white);border:1px solid #d9d7ce;min-width:0}
+    .cover{aspect-ratio:2/3;background:linear-gradient(155deg,#2c5260,#0b2733 75%);color:#f2ece0;display:flex;flex-direction:column;justify-content:space-between;position:relative;padding:.65rem .58rem;overflow:hidden;box-shadow:2px 4px 5px #0014;text-align:left;isolation:isolate}
+    .cover::before{content:"";z-index:-1;position:absolute;width:165%;height:75%;border:1px solid #d6c8aa66;border-radius:50%;left:-48%;top:25%;transform:rotate(-25deg);box-shadow:0 0 0 18px #c9ceb615,0 0 0 37px #c9ceb611,0 0 0 60px #c9ceb60c}
+    .cover[data-family="receipts"]{background:linear-gradient(165deg,#586c60,#1a3031)}
+    .cover[data-family="hydrogen"]{background:linear-gradient(165deg,#644c54,#1b2937)}
+    .cover[data-family="pier"]{background:linear-gradient(165deg,#466a76,#132f3a)}
+    .cover[data-family="vault"]{background:linear-gradient(165deg,#344f64,#1b273b)}
+    .cover[data-family="shocks"]{background:linear-gradient(165deg,#72604e,#27383c)}
+    .cover[data-family="balloon"]{background:linear-gradient(165deg,#6c7866,#263c46)}
+    .cover[data-family="ire"]{background:linear-gradient(165deg,#65645d,#24272e)}
+    .cover[data-family="armor"]{background:linear-gradient(165deg,#747c87,#4b5563)}
+    .cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+    .cover .micro{font-size:.52rem;letter-spacing:.09em;line-height:1.35}
+    .cover strong{font:normal clamp(.95rem,1.25vw,1.25rem) Georgia,serif;line-height:1.08;letter-spacing:-.035em;overflow-wrap:anywhere}
+    .cover .cover-bottom{font-size:.49rem;letter-spacing:.06em;color:#d2d9d3;text-transform:uppercase}
+    .book-body{min-width:0;display:flex;flex-direction:column;align-items:start}
+    .record-id{color:#8b7666;font-size:.62rem;letter-spacing:.05em}
+    .book-body h3{font-size:1.29rem;letter-spacing:-.035em;line-height:1.16;margin:.45rem 0 .25rem}
+    .book-sub{font-size:.73rem;color:#5e7375;margin-bottom:.6rem}
+    .book-hook{font-size:.8rem;line-height:1.47;color:#52666a;margin:0 0 .8rem}
+    .book-hook.pending{font-style:italic;color:#7b8685}
+    .format-note{font:700 .61rem ui-monospace,monospace;color:#56716e;letter-spacing:.06em;text-transform:uppercase;margin-top:auto;margin-bottom:.65rem}
+    .buy-links{display:flex;gap:.43rem;flex-wrap:wrap;align-items:center}
+    .buy-links a{border:1px solid #a3b5b0;border-radius:2px;text-decoration:none;color:#234d52;padding:.39rem .58rem;font-size:.71rem;font-weight:800;background:#f2f5ef}
+    .buy-links a:hover{background:#dce8e1}
+    .buy-links .main-link{background:#164752;color:#fff;border-color:#164752}.buy-links .main-link:hover{background:#0d3039}
+    .buy-links a:focus-visible{outline-color:#bd7525}
+    [hidden]{display:none!important}
+    .empty{display:none;background:#e8e6dd;padding:1.5rem;text-align:center;color:#596d6d}
+    .about{background:#0b2630;color:#f2f2e9;position:relative;overflow:hidden}
+    .about::after{content:"";position:absolute;width:750px;height:750px;right:-300px;top:-250px;border:1px solid #345561;border-radius:50%;box-shadow:0 0 0 75px #30515d30,0 0 0 150px #30515d15;pointer-events:none}
+    .about .section-head .eyebrow{color:var(--aqua)}
+    .about .section-head p{color:#b0c6c3}
+    .identity-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.75rem;position:relative;z-index:1}
+    .identity{border:1px solid #365561;background:#0e303b;padding:1.2rem 1rem;min-height:185px}
+    .identity b{font:normal 2.7rem Georgia,serif;color:#9bc7c1;line-height:1}
+    .identity h3{font-size:1.21rem;margin:.75rem 0 .3rem}
+    .identity p{font-size:.79rem;color:#bacfcb;margin:0}
+    .last-word{border-top:1px solid #3e5c64;margin-top:2.4rem;padding-top:1.1rem;color:#b6c8c7;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.8rem;position:relative;z-index:1}
+    .footer{background:#06161d;color:#abc0c0;padding:2.1rem 0;font-size:.78rem}
+    .footer .wrap{display:flex;justify-content:space-between;gap:1.4rem;align-items:center;flex-wrap:wrap}
+    .footer strong{display:block;color:#f2f0e7;font:normal 1.25rem Georgia,serif}
+    .footer p{margin:.35rem 0 0;max-width:560px}
+    .footer a{color:#d5e5dc}
+    @media(max-width:1090px){.entry-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.identity-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-grid{gap:2rem}.book-grid{grid-template-columns:1fr}.latest-card{flex-direction:column}}
+    @media(max-width:760px){.wrap{width:min(var(--max),calc(100% - 1.65rem))}.mast-row{min-height:66px;flex-wrap:wrap;gap:.4rem;padding-block:.65rem}.brand strong{font-size:1.06rem}.brand-sigil{width:35px;height:35px}.navlinks{order:2;width:100%;overflow-x:auto;gap:1.2rem;padding:.65rem 0 .25rem}.navlinks a{font-size:.74rem}.hero-grid{grid-template-columns:1fr;padding-block:3.9rem 3.6rem;min-height:initial}.hero-art{display:none}.hero .eyebrow{font-size:.65rem}h1{font-size:clamp(3.2rem,12vw,5rem)}.hero-facts{gap:.55rem}.hero-facts span:not(:last-child)::after{margin-left:.55rem}.section{padding:3.5rem 0}.section-head{display:block}.section-head p{margin-top:.9rem}.latest-grid{grid-template-columns:1fr}.latest-card{flex-direction:row}.catalog-controls{grid-template-columns:1fr 1fr}.catalog-controls .search-field{grid-column:1/-1}.identity-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.random-section{align-items:flex-start;flex-direction:column}}
+    @media(max-width:540px){.entry-grid{grid-template-columns:1fr}.entry{min-height:205px;padding:1.1rem}.entry h3{margin:.65rem 0 .45rem}.book-card{grid-template-columns:90px minmax(0,1fr);gap:.75rem;padding:.7rem}.book-body h3{font-size:1.2rem}.cover{padding:.45rem}.cover strong{font-size:.92rem}.cover .micro{font-size:.42rem}.cover .cover-bottom{font-size:.43rem}.family-title{font-size:1.47rem}.family-summary{font-size:.68rem;gap:.5rem}.book-sub{font-size:.7rem}.identity-grid{grid-template-columns:1fr}.identity{min-height:0}.catalog-controls{grid-template-columns:1fr}.catalog-controls .search-field{grid-column:auto}.hero-facts{flex-direction:column;gap:.25rem}.hero-facts span:not(:last-child)::after{display:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast" id="top"><div class="wrap mast-row">
+  <a class="brand" href="#top" aria-label="Harbor City Archives, back to top"><span class="brand-sigil" aria-hidden="true">H</span><span class="brand-text"><strong>Harbor City Archives</strong><small>A SHIVA literary repository</small></span></a>
+  <nav class="navlinks" aria-label="Main navigation"><a href="#start">Start here</a><a href="#series">Series</a><a href="#catalog">Catalog</a><a href="#about">What is SHIVA?</a><a class="nav-cta" href="#catalog">Open the files</a></nav>
+</div></header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title"><div class="wrap hero-grid">
+ <div class="hero-copy">
+  <div class="eyebrow">PUBLIC INDEX / ACCESS GRANTED</div>
+  <h1 id="hero-title">THE RECORD<br>BREATHES.</h1>
+  <p class="hero-lede">Welcome to Harbor City. An ordinary-looking place with an extraordinary filing problem.</p>
+  <p class="hero-sub">SHIVA is an interconnected literary universe told through five author identities. Start with a strange headset, an impossible receipt, a mystery below the seawall, or the cosmic machinery beneath it all. You do not need the whole map to open your first book.</p>
+  <div class="btn-row"><a class="button button-primary" href="#start">Find your first book <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#catalog">Browse the catalog</a></div>
+  <div class="hero-facts"><span><strong id="book-total">32</strong> cataloged titles</span><span>5 author identities</span><span>8 archive shelves</span></div>
+ </div>
+ <div class="hero-art" aria-hidden="true"><div class="file-sheet"><div class="sheet-row"><span>HARBOR CITY<br>COASTAL RECORDS</span><span>ARCHIVE 505<br>REV / 0410</span></div><div class="sheet-title">SEAWALL<br>INCIDENT FILE</div><div class="sheet-sub">RETAIN ORIGINAL · DO NOT NORMALIZE</div><div class="sheet-figure"><svg viewBox="0 0 320 182" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 146C52 119 91 156 131 132s77-44 115-21 58 8 74-2" stroke="#729c98" stroke-width="2"/><path d="M0 157C52 130 91 167 131 143s77-44 115-21 58 8 74-2" stroke="#729c98" stroke-width="1" opacity=".6"/><path d="M0 168C52 141 91 178 131 154s77-44 115-21 58 8 74-2" stroke="#729c98" stroke-width="1" opacity=".45"/><path d="M12 82h296M12 110h296M12 138h296" stroke="#a6bcb4" stroke-width=".7" stroke-dasharray="4 8"/><path d="M10 87 52 80 84 78 101 51 116 75 137 74 154 61 172 81 209 78 232 87 258 77 274 83 312 76" stroke="#4b7478" stroke-width="2.2"/><path d="M0 88h320" stroke="#4b7478" stroke-width="4"/><path d="M57 81V51h12v30M61 51V43h4v8M99 51l3-17 6 17M159 62V31h8v31M161 31l2-12 2 12" stroke="#4b7478" stroke-width="2"/><circle cx="237" cy="85" r="24" stroke="#ba806c" stroke-width="1" stroke-dasharray="3 4"/><circle cx="237" cy="85" r="4" fill="#ba806c"/><path d="M237 51v25M237 94v25M204 85h24M246 85h23" stroke="#ba806c"/><text x="15" y="22" font-size="7" fill="#5e7777" letter-spacing="1.5">SECTION 14-C</text><text x="269" y="171" font-size="9" fill="#9c6255">+0.3%</text></svg></div><div class="sheet-foot"><span>FIELD REPORT:<br>DEVIATION ACCEPTABLE<br>SUBJECT TO REVIEW</span><span class="sheet-stamp">ON RECORD</span></div></div></div>
+</div></section>
+<section class="section" id="start" aria-labelledby="start-title"><div class="wrap">
+ <div class="section-head"><div><div class="eyebrow">INTAKE DESK / FIRST VISIT</div><h2 id="start-title">There is no wrong door.</h2></div><p>Not sure where to begin? Choose the kind of story you want. These are real starting points from the published catalog, not a prerequisite course in the mythology.</p></div>
+ <div class="entry-grid" id="entry-grid"></div>
+ <div class="random-section"><div><strong>Can't decide? Let the archive choose.</strong><p>One randomly selected first book. No personality test, no municipal paperwork.</p><div class="random-result" id="random-result" aria-live="polite"></div></div><button type="button" class="button button-paper" id="random-button">Give me a record ↗</button></div>
+</div></section>
+<div class="series-strip" id="series"><div class="wrap"><div class="eyebrow">DIRECTORY / SELECT A SHELF</div><div class="series-list" id="series-list"></div></div></div>
+<section class="section latest" id="latest" aria-labelledby="latest-title"><div class="wrap"><div class="section-head"><div><div class="eyebrow">RECENT FILING ACTIVITY</div><h2 id="latest-title">Recently recovered.</h2></div><p>Recent KDP submissions, not a claim about original publication dates. The archive dates paperwork more reliably than history.</p></div><div class="latest-grid" id="latest-grid"></div></div></section>
+<section class="section catalog" id="catalog" aria-labelledby="catalog-title"><div class="wrap">
+ <div class="section-head"><div><div class="eyebrow">PUBLIC CATALOG / ALL FILES</div><h2 id="catalog-title">Browse the holdings.</h2></div><p>Books are organized by series. Open a shelf, search a title, or filter by the signature on the file. Each available format leads directly to its Amazon listing.</p></div>
+ <div class="catalog-controls"><div class="field search-field"><label for="book-search">Search book records</label><input type="search" id="book-search" placeholder="Title, author, series, or keyword" autocomplete="off"></div><div class="field"><label for="series-filter">Series / shelf</label><select id="series-filter"><option value="">All series</option></select></div><div class="field"><label for="author-filter">Author identity</label><select id="author-filter"><option value="">All authors</option></select></div></div>
+ <div class="catalog-meta"><span id="result-count" aria-live="polite">Showing all cataloged books</span><button type="button" class="small-button" id="reset-filters">Clear filters</button></div>
+ <div class="notice">FORMAT NOTE: Only editions marked live or preorder in the supplied KDP snapshot have purchase links. Covers shown here are temporary archive placeholders, not the published book artwork.</div>
+ <div id="catalog-shelves"></div><div id="no-results" class="empty">No records match those filters. Try a different title or clear the filters.</div>
+</div></section>
+<section class="section about" id="about" aria-labelledby="about-title"><div class="wrap">
+ <div class="section-head"><div><div class="eyebrow">ORIGIN OF THE FILES</div><h2 id="about-title">Five signatures. One architecture.</h2></div><p>SHIVA is not a required reading order. It is five distinct ways into a connected body of fiction, each with its own tone and audience.</p></div>
+ <div class="identity-grid"><div class="identity"><b>S</b><h3>CL Seawall</h3><p>Receipts, witnesses, and the quiet violence of official paperwork.</p></div><div class="identity"><b>H</b><h3>CL Harbor</h3><p>Industrial dread, buried infrastructure, and large-scale speculative mythology.</p></div><div class="identity"><b>I</b><h3>CL Ire</h3><p>Memory, history, memoir noir, and the records beneath the stories.</p></div><div class="identity"><b>V</b><h3>CL Vault</h3><p>Young investigators, unsettling technology, and things found below ordinary places.</p></div><div class="identity"><b>A</b><h3>CL Armor</h3><p>Protective stories for younger readers, with approachable monsters and useful language.</p></div></div>
+ <div class="last-word"><span>HARBOR CITY ARCHIVES / THE RECORD BREATHES</span><span>Some stories begin as warnings. Others begin as receipts.</span></div>
+</div></section>
+</main>
+<footer class="footer"><div class="wrap"><div><strong>Harbor City Archives</strong><p>Fictional records. Real books. A public gateway to the SHIVA Literary Universe. Amazon links open an external store.</p></div><div><div>Catalog based on the KDP Bookshelf snapshot supplied November 1, 2026.</div><div><a href="#top">Return to surface ↑</a></div></div></div></footer>
+<script type="application/json" id="catalog-data">[{"id":"the-mother-s-song","title":"The Mother's Song","subtitle":"The 505 Chronicles Through Time","author":"CL Ire","series":"CL Ire / The 505 Chronicles","seriesNumber":null,"family":"ire","kindle":{"status":"live","asin":"B0H92X6B16","priceUSD":4.99,"submitted":"July 16, 2026","scheduledReleaseDate":null},"paperback":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"the-famine-of-the-father","title":"The Famine of The Father","subtitle":"The Hydrogen Tapestry Book 4","author":"CL Harbor","series":"The Hydrogen Tapestry","seriesNumber":4,"family":"hydrogen","kindle":{"status":"live","asin":"B0GPWF8HS3","priceUSD":4.99,"submitted":"February 24, 2026","scheduledReleaseDate":null},"paperback":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"the-gensysloop","title":"The GenSysLoop","subtitle":"The Hydrogen Tapestry Book 3","author":"CL Harbor","series":"The Hydrogen Tapestry","seriesNumber":3,"family":"hydrogen","kindle":{"status":"live","asin":"B0GPSWZ2PY","priceUSD":4.99,"submitted":"February 24, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GVDV89XK","priceUSD":17.99,"submitted":"March 30, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"the-coherence-tax","title":"The Coherence Tax","subtitle":"The Hydrogen Tapestry Book 2","author":"CL Harbor","series":"The Hydrogen Tapestry","seriesNumber":2,"family":"hydrogen","kindle":{"status":"live","asin":"B0GKNWLNMV","priceUSD":4.99,"submitted":"January 30, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GPXWLR4R","priceUSD":17.99,"submitted":"February 24, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"the-spite-engine","title":"The Spite Engine","subtitle":"The Hydrogen Tapestry Book 1","author":"CL Harbor","series":"The Hydrogen Tapestry","seriesNumber":1,"family":"hydrogen","kindle":{"status":"live","asin":"B0GKDGCP1P","priceUSD":4.99,"submitted":"January 31, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GPVYJG3W","priceUSD":17.99,"submitted":"February 24, 2026","scheduledReleaseDate":null},"hardcover":{"status":"draft","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":"Two cosmic brothers learn their rivalry may have been engineered to feed the one who made them."},{"id":"the-convergence","title":"The Convergence","subtitle":"The Hydrogen Tapestry Book 5","author":"CL Harbor","series":"The Hydrogen Tapestry","seriesNumber":5,"family":"hydrogen","kindle":{"status":"live","asin":"B0HQ1B8KQV","priceUSD":9.99,"submitted":"November 1, 2026","scheduledReleaseDate":null},"paperback":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"the-warmth-index","title":"The Warmth Index","subtitle":"Harbor Mystery 6 Book 4","author":"CL Seawall","series":"The Harbor Six Mysteries","seriesNumber":4,"family":"receipts","kindle":{"status":"live","asin":"B0HPY3925D","priceUSD":5.99,"submitted":"October 31, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0HPZ8Z96R","priceUSD":13.99,"submitted":"November 1, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"the-launch-window","title":"The Launch Window","subtitle":"Vault Chronicles #5","author":"CL Vault","series":"Vault Chronicles","seriesNumber":5,"family":"vault","kindle":{"status":"live","asin":"B0H4FDYWCR","priceUSD":4.99,"submitted":"June 8, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0HPZ7DBPQ","priceUSD":11.99,"submitted":"November 1, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"the-unbreakable-fool","title":"The Unbreakable Fool","subtitle":"A Harbor City Memoir The Book of Earl","author":"CL Ire","series":"CL Ire / The 505 Chronicles","seriesNumber":null,"family":"ire","kindle":{"status":"live","asin":"B0H92FG4S9","priceUSD":4.99,"submitted":"July 15, 2026","scheduledReleaseDate":null},"paperback":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":"The black box beneath the mythology: hums, bunkers, orbit, survival math, and a record that refuses to vanish."},{"id":"your-mother-deserves-this","title":"Your mother deserves this","subtitle":"Harbor Pier, A Harbor City Book: #4","author":"CL Harbor","series":"Harbor Pier","seriesNumber":4,"family":"pier","kindle":{"status":"live","asin":"B0H8X59KJC","priceUSD":3.99,"submitted":"July 15, 2026","scheduledReleaseDate":null},"paperback":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"yesterdays-oil","title":"Yesterdays Oil","subtitle":"Harbor Pier, A Harbor City Book: #3","author":"CL Harbor","series":"Harbor Pier","seriesNumber":3,"family":"pier","kindle":{"status":"live","asin":"B0F22LWB8P","priceUSD":2.99,"submitted":"March 29, 2026","scheduledReleaseDate":null},"paperback":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"salt-radius","title":"Salt Radius","subtitle":"Harbor Pier, A Harbor City Book: #2","author":"CL Harbor","series":"Harbor Pier","seriesNumber":2,"family":"pier","kindle":{"status":"live","asin":"B0GHP1B2C3","priceUSD":2.99,"submitted":"March 29, 2026","scheduledReleaseDate":null},"paperback":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"the-maintenance-window","title":"The Maintenance Window","subtitle":"Harbor Pier, A Harbor City Book: #1","author":"CL Harbor","series":"Harbor Pier","seriesNumber":1,"family":"pier","kindle":{"status":"live","asin":"B0GHSWH3GN","priceUSD":2.99,"submitted":"March 28, 2026","scheduledReleaseDate":null},"paperback":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":"Seawall sensors rise inside “acceptable variance.” Then a camera displays February 30."},{"id":"the-kindness-file","title":"The Kindness File","subtitle":"The Harbor Six Mysteries, Book 3","author":"CL Seawall","series":"The Harbor Six Mysteries","seriesNumber":3,"family":"receipts","kindle":{"status":"live","asin":"B0GHZN2RP8","priceUSD":5.99,"submitted":"March 7, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GVFDFJDP","priceUSD":13.99,"submitted":"March 30, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"the-return-stamp","title":"The Return Stamp","subtitle":"The Harbor Six Mysteries, Book 2","author":"CL Seawall","series":"The Harbor Six Mysteries","seriesNumber":2,"family":"receipts","kindle":{"status":"live","asin":"B0GL5B4W4P","priceUSD":5.99,"submitted":"February 3, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GS29ZJVH","priceUSD":13.99,"submitted":"March 10, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"soot-season","title":"Soot Season","subtitle":"The Harbor Six Mysteries, Book 1","author":"CL Seawall","series":"The Harbor Six Mysteries","seriesNumber":1,"family":"receipts","kindle":{"status":"live","asin":"B0GL2H7K3J","priceUSD":5.99,"submitted":"February 2, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GS2MV3JQ","priceUSD":12.99,"submitted":"March 10, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":"Six girls start keeping records when the city begins rewriting posts, identities, and permission."},{"id":"the-stone-spine","title":"The Stone Spine","subtitle":"The Boy in the Balloon: Chronicles Through Time, Book 3","author":"CL Ire","series":"The Boy in the Balloon","seriesNumber":3,"family":"balloon","kindle":{"status":"live","asin":"B0GSNDST3L","priceUSD":5.99,"submitted":"March 15, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GVF6XHJB","priceUSD":14.99,"submitted":"March 30, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"the-immortal-stalk","title":"The Immortal Stalk","subtitle":"The Boy in the Balloon: Chronicles Through Time, Book 2","author":"CL Ire","series":"The Boy in the Balloon","seriesNumber":2,"family":"balloon","kindle":{"status":"live","asin":"B0GSMQHDGK","priceUSD":5.99,"submitted":"March 15, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GVDXGV81","priceUSD":14.99,"submitted":"March 30, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"the-first-lift","title":"The First Lift","subtitle":"The Boy in the Balloon: Chronicles Through Time, Book 1","author":"CL Ire","series":"The Boy in the Balloon","seriesNumber":1,"family":"balloon","kindle":{"status":"live","asin":"B0GS7C96XW","priceUSD":5.99,"submitted":"March 11, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GS9PQNTB","priceUSD":14.99,"submitted":"March 12, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":"A boy cast out from his community meets a builder experimenting with flight and follows a hum toward the coast."},{"id":"station-zero","title":"Station Zero","subtitle":"Vault Chronicles #4","author":"CL Vault","series":"Vault Chronicles","seriesNumber":4,"family":"vault","kindle":{"status":"live","asin":"B0GTS87NX4","priceUSD":4.99,"submitted":"March 25, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0HPXBDZS7","priceUSD":11.99,"submitted":"October 31, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"the-siren-in-the-screen","title":"The Siren in the Screen","subtitle":"Vault Chronicles #3","author":"CL Vault","series":"Vault Chronicles","seriesNumber":3,"family":"vault","kindle":{"status":"live","asin":"B0GRMHSSRW","priceUSD":4.99,"submitted":"March 7, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GSBDFMNQ","priceUSD":11.99,"submitted":"March 12, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"the-static-clown","title":"The Static Clown","subtitle":"Vault Chronicles #2","author":"CL Vault","series":"Vault Chronicles","seriesNumber":2,"family":"vault","kindle":{"status":"live","asin":"B0GL7341HZ","priceUSD":4.99,"submitted":"February 3, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GS2P81SL","priceUSD":11.99,"submitted":"March 10, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":"A ghostly mime becomes the center of a mystery for kids who do not know what a mime is."},{"id":"the-hatch-in-the-hollow","title":"The Hatch in the Hollow","subtitle":"Vault Chronicles #1","author":"CL Vault","series":"Vault Chronicles","seriesNumber":1,"family":"vault","kindle":{"status":"live","asin":"B0GL7J81SJ","priceUSD":4.99,"submitted":"February 3, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GQKR4MWJ","priceUSD":11.99,"submitted":"February 28, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":"Detention, an empty closet, an impossible mark, and a hatch where no hatch should be."},{"id":"the-eighth-file","title":"The Eighth File","subtitle":"Tales from the Vault: Short Shocks 8","author":"CL Vault","series":"Tales From the Vault: Short Shocks","seriesNumber":8,"family":"shocks","kindle":{"status":"preorder","asin":"B0HPR71F37","priceUSD":2.99,"submitted":null,"scheduledReleaseDate":"November 2, 2026"},"paperback":{"status":"live","asin":"B0HPTPTF4Z","priceUSD":9.99,"submitted":"October 30, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"hello-world","title":"Hello World","subtitle":"Tales From the Vault: Short Shocks 7","author":"CL Vault","series":"Tales From the Vault: Short Shocks","seriesNumber":7,"family":"shocks","kindle":{"status":"live","asin":"B0GRPLDFXW","priceUSD":2.99,"submitted":"March 7, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GRVZWXN2","priceUSD":9.99,"submitted":"March 9, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":null},{"id":"frequency-of-the-fallen","title":"Frequency of the Fallen","subtitle":"Tales From the Vault: Short Shocks 6","author":"CL Vault","series":"Tales From the Vault: Short Shocks","seriesNumber":6,"family":"shocks","kindle":{"status":"live","asin":"B0GRPLMJ7S","priceUSD":2.99,"submitted":"March 7, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GS2CH6QG","priceUSD":9.99,"submitted":"March 10, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":"The next Short Shocks protagonist encounters the continuing machinery beneath Harbor City."},{"id":"cove-titan","title":"Cove Titan","subtitle":"Tales From the Vault: Short Shocks 5","author":"CL Vault","series":"Tales From the Vault: Short Shocks","seriesNumber":5,"family":"shocks","kindle":{"status":"live","asin":"B0GRPV4WB9","priceUSD":2.99,"submitted":"March 7, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GS2B751D","priceUSD":9.99,"submitted":"March 10, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":"A new protagonist hears a hum that Harbor City has not explained."},{"id":"low-tide-lullaby","title":"Low Tide Lullaby","subtitle":"Tales From the Vault: Short Shocks: 4","author":"CL Vault","series":"Tales From the Vault: Short Shocks","seriesNumber":4,"family":"shocks","kindle":{"status":"live","asin":"B0GQNVM3HJ","priceUSD":2.99,"submitted":"February 28, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GRVFG8B3","priceUSD":9.99,"submitted":"March 9, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":"A missing child and a hidden mechanism beneath the harbor pull the story toward older machinery."},{"id":"found-fort","title":"Found Fort","subtitle":"Tales From the Vault: Short Shocks 3","author":"CL Vault","series":"Tales From the Vault: Short Shocks","seriesNumber":3,"family":"shocks","kindle":{"status":"live","asin":"B0GNP1RCYJ","priceUSD":2.99,"submitted":"February 16, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GRVC8S4Y","priceUSD":9.99,"submitted":"March 9, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":"A low-tech fort with Arduino security sits beside a junkyard that is not behaving normally."},{"id":"officer-yield","title":"Officer Yield","subtitle":"Tales From the Vault: Short Shocks 2","author":"CL Vault","series":"Tales From the Vault: Short Shocks","seriesNumber":2,"family":"shocks","kindle":{"status":"live","asin":"B0GNJ13WZJ","priceUSD":2.99,"submitted":"February 14, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GRV6FYFV","priceUSD":9.99,"submitted":"March 9, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":"An animatronic experiment and a stolen traffic-camera AI turn into procedural horror."},{"id":"the-afk-kid","title":"The AFK Kid","subtitle":"Tales From the Vault: Short Shocks 1","author":"CL Vault","series":"Tales From the Vault: Short Shocks","seriesNumber":1,"family":"shocks","kindle":{"status":"live","asin":"B0GMP4XB29","priceUSD":2.99,"submitted":"February 10, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GRV57LNP","priceUSD":9.99,"submitted":"March 9, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":"A VR headset can run Sam’s real body while he is in-game. The machine may be better at being him than he is."},{"id":"the-clh-armor-series","title":"The CLH Armor Series","subtitle":"Grimoire Edition","author":"CL Armor","series":"CLH Armor","seriesNumber":1,"family":"armor","kindle":{"status":"live","asin":"B0GS7D6T9W","priceUSD":3.99,"submitted":"March 12, 2026","scheduledReleaseDate":null},"paperback":{"status":"live","asin":"B0GS9R4X9V","priceUSD":29.99,"submitted":"March 12, 2026","scheduledReleaseDate":null},"hardcover":{"status":"unavailable","asin":null,"priceUSD":null,"submitted":null,"scheduledReleaseDate":null},"cover":null,"hook":"Bedtime-sized monsters and counter-spells introduce young readers to feelings, truth, and boundaries."}]</script>
+<script>
+(()=>{
+  'use strict';
+  const books=JSON.parse(document.getElementById('catalog-data').textContent);
+  const shelves=[
+    {id:'shocks',name:'Tales From the Vault: Short Shocks',short:'Short Shocks',intro:'Compact, high-concept technology and glitch horror around Harbor City. Start with The AFK Kid.'},
+    {id:'vault',name:'Vault Chronicles',short:'Vault Chronicles',intro:'A group of young investigators follows impossible clues beneath the familiar city.'},
+    {id:'receipts',name:'The Receipt Society / Harbor Six Mysteries',short:'The Receipt Society',intro:'Six girls, impossible paperwork, and a city whose official explanations never quite match the evidence.'},
+    {id:'pier',name:'Harbor Pier',short:'Harbor Pier',intro:'Adult-scale Harbor City stories told through the machinery of ordinary civic life.'},
+    {id:'hydrogen',name:'The Hydrogen Tapestry',short:'Hydrogen Tapestry',intro:'The speculative and mythic machinery behind worlds, histories, conflict, and the cost of refusing it.'},
+    {id:'balloon',name:'The Boy in the Balloon',short:'Boy in the Balloon',intro:'A chronological literary journey that begins with exile, invention, and a hum beneath the coast.'},
+    {id:'ire',name:'CL Ire / 505 Chronicles',short:'CL Ire / 505',intro:'Memoir noir and literary records. The available titles are cataloged together, but not presented as a numbered series without KDP support.'},
+    {id:'armor',name:'CLH Armor',short:'CLH Armor',intro:'Illustrated, protective storytelling for younger readers, collected in the Grimoire Edition.'}
+  ];
+
+  // Exact ISBN/ASIN details are kept in the single JSON catalog above.
+  const entryPoints=[
+    {label:'Creepy, quick, and clever',heading:'The wrong headset',id:'the-afk-kid',audience:'Accessible sci-fi horror'},
+    {label:'Mystery and investigation',heading:'Start with the ledger',id:'soot-season',audience:'Teen mystery'},
+    {label:'Young adventurers',heading:'The door beneath the floor',id:'the-hatch-in-the-hollow',audience:'Middle-grade mystery'},
+    {label:'Harbor City itself',heading:'Start at the seawall',id:'the-maintenance-window',audience:'Industrial mystery'},
+    {label:'Big cosmic science fiction',heading:'Find the engine',id:'the-spite-engine',audience:'Speculative fiction'},
+    {label:'Strange literary history',heading:'Follow the first flight',id:'the-first-lift',audience:'Literary journey'},
+    {label:'A memoir-shaped record',heading:'Open the black box',id:'the-unbreakable-fool',audience:'Adult literary material'},
+    {label:'Younger readers',heading:'Meet the monsters',id:'the-clh-armor-series',audience:'Children’s stories'}
+  ];
+  const byId=Object.fromEntries(books.map(b=>[b.id,b]));
+  const $=id=>document.getElementById(id);
+  const el=(tag,className,text)=>{const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node;};
+  const amazon=asin=>'https://www.amazon.com/dp/'+encodeURIComponent(asin);
+  const formatAvailable=f=>f?.asin&&(f.status==='live'||f.status==='preorder');
+  const link=(label,href,className)=>{const a=el('a',className,label);a.href=href;a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label',label+' on Amazon, opens new tab');return a;};
+  const formatLinks=(b,small=false)=>{const p=el('div','buy-links');if(formatAvailable(b.kindle))p.append(link(b.kindle.status==='preorder'?'Preorder Kindle ↗':'Kindle ↗',amazon(b.kindle.asin),'main-link'));if(formatAvailable(b.paperback))p.append(link('Paperback ↗',amazon(b.paperback.asin)));if(formatAvailable(b.hardcover))p.append(link('Hardcover ↗',amazon(b.hardcover.asin)));return p;};
+  const sorted=(arr)=>[...arr].sort((a,b)=>(a.seriesNumber??999)-(b.seriesNumber??999)||a.title.localeCompare(b.title));
+  function renderEntries(){
+    const root=$('entry-grid');
+    for(const item of entryPoints){const b=byId[item.id];if(!b)continue;
+      const card=el('article','entry');card.append(el('div','eyebrow',item.label),el('h3','',item.heading),el('p','',b.hook||item.audience));
+      const bottom=el('div','entry-title');bottom.append(link(b.title+' ↗',amazon(b.kindle.asin)));card.append(bottom,el('div','book-number',item.audience));root.append(card);
+    }
+    $('random-button').addEventListener('click',()=>{
+      const choice=byId[entryPoints[Math.floor(Math.random()*entryPoints.length)].id];const holder=$('random-result');holder.replaceChildren();
+      holder.append(document.createTextNode('RECOVERED FILE: '));holder.append(link(choice.title+' ↗',amazon(choice.kindle.asin)));holder.classList.add('visible');
+    });
+  }
+  function renderSeries(){const root=$('series-list');for(const s of shelves){const b=books.filter(x=>x.family===s.id);const a=el('a','series-link');a.href='#catalog';a.append(document.createTextNode(s.short+' '),el('span','',String(b.length).padStart(2,'0')));a.addEventListener('click',()=>{$('series-filter').value=s.id;setTimeout(()=>filterCatalog(true),0)});root.append(a);const option=el('option','',s.name);option.value=s.id;$('series-filter').append(option)}
+    for(const author of [...new Set(books.map(x=>x.author))].sort()){const option=el('option','',author);option.value=author;$('author-filter').append(option)}
+  }
+  function fileDate(b){const dates=[b.kindle?.submitted,b.paperback?.submitted,b.hardcover?.submitted].filter(Boolean).map(x=>new Date(x+' 00:00:00 GMT'));return dates.length?new Date(Math.max(...dates.map(x=>x.getTime()))):new Date(0)}
+  function renderLatest(){const items=[...books].sort((a,b)=>fileDate(b)-fileDate(a)||a.title.localeCompare(b.title)).slice(0,3);const root=$('latest-grid');
+    for(const [i,b] of items.entries()){const card=el('article','latest-card');card.append(el('div','latest-mark',String(i+1).padStart(2,'0')));const info=el('div');info.append(el('div','micro',b.author+' / '+fileDate(b).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'})),el('h3','latest-title',b.title),el('div','status-note','Latest KDP submission shown in supplied snapshot'));info.append(formatLinks(b));card.append(info);root.append(card)}
+  }
+  function cover(b){const c=el('div','cover');c.dataset.family=b.family;
+    c.append(el('div','micro','SHIVA / '+b.author.toUpperCase()),el('strong','',b.title),el('div','cover-bottom','Website cover pending'));
+    if(b.cover){const image=el('img');image.src=b.cover;image.alt='Cover of '+b.title;image.loading='lazy';image.decoding='async';image.onerror=()=>image.remove();c.append(image)}
+    return c;
+  }
+  function renderCatalog(){const root=$('catalog-shelves');for(const s of shelves){const list=sorted(books.filter(b=>b.family===s.id));const details=el('details','family');details.dataset.family=s.id;if(['shocks','receipts'].includes(s.id))details.open=true;
+      const summary=el('summary');summary.append(el('span','family-title',s.name));const end=el('span','family-summary');end.append(el('span','',list.length+' RECORD'+(list.length===1?'':'S')),el('span','plus','+'));summary.append(end);details.append(summary);
+      const body=el('div','family-body');body.append(el('p','family-desc',s.intro));const grid=el('div','book-grid');
+      for(const b of list){const card=el('article','book-card');card.id='record-'+b.id;card.dataset.search=[b.title,b.subtitle||'',b.author,b.series,b.hook||''].join(' ').toLowerCase();card.dataset.author=b.author;
+        card.append(cover(b));const inner=el('div','book-body');inner.append(el('div','record-id','HC / '+b.family.toUpperCase()+' / '+(b.seriesNumber?String(b.seriesNumber).padStart(2,'0'):'FILE')));
+        inner.append(el('h3','',b.title));inner.append(el('div','book-sub',b.author+' · '+(b.seriesNumber?'Book '+b.seriesNumber:'Archive title')));
+        if(b.hook)inner.append(el('p','book-hook',b.hook));else inner.append(el('p','book-hook pending','Detailed archive description pending.'));
+        const statuses=[];if(formatAvailable(b.kindle))statuses.push(b.kindle.status==='preorder'?'Kindle preorder':'Kindle');if(formatAvailable(b.paperback))statuses.push('Paperback');if(formatAvailable(b.hardcover))statuses.push('Hardcover');inner.append(el('div','format-note',statuses.join(' · ')||'No live formats recorded'));
+        inner.append(formatLinks(b));card.append(inner);grid.append(card);
+      }
+      body.append(grid);details.append(body);root.append(details);
+    }
+  }
+  function filterCatalog(forceOpen=false){const query=$('book-search').value.trim().toLocaleLowerCase();const fam=$('series-filter').value;const author=$('author-filter').value;let n=0;
+    for(const details of document.querySelectorAll('#catalog-shelves .family')){let count=0;for(const card of details.querySelectorAll('.book-card')){const matched=(!fam||details.dataset.family===fam)&&(!author||card.dataset.author===author)&&(!query||card.dataset.search.includes(query));card.hidden=!matched;if(matched)count++;}details.hidden=!count;n+=count;if(count&&(query||fam||author||forceOpen))details.open=true;}
+    $('result-count').textContent='Showing '+n+' of '+books.length+' records';$('no-results').style.display=n?'none':'block';
+  }
+  function init(){ $('book-total').textContent=books.length;renderEntries();renderSeries();renderLatest();renderCatalog();$('book-search').addEventListener('input',()=>filterCatalog());$('series-filter').addEventListener('change',()=>filterCatalog());$('author-filter').addEventListener('change',()=>filterCatalog());$('reset-filters').addEventListener('click',()=>{$('book-search').value='';$('series-filter').value='';$('author-filter').value='';filterCatalog()});filterCatalog();}
+  init();
+})();
+</script>
+</body>
+</html>
