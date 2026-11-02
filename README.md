@@ -1,57 +1,67 @@
-# Harbor City Archives — temporary site with real covers
+# HARBOR CITY ARCHIVES — Interim Static Site (Revision 2)
 
-**This site is a draft. It has NOT been uploaded to GitHub or deployed to HarborCityUSA.com.**
+**Status:** LOCAL PREVIEW / NOT DEPLOYED. Back up the current live website before replacing any files.
 
-## What's included
+This package is a static, responsive public archive for HarborCityUSA.com. It is compatible with GitHub Pages or a typical static web host. It does not require a database or server-side code to display books. The catalog works without JavaScript; the Kit subscription form loads from Kit when online.
 
-- `index.html`: publishable temporary landing page. It references the web-optimized images in `assets/covers/`.
-- `assets/covers/*.webp`: 31 real Kindle cover images, resized to 480 pixels wide. Keep these paths intact.
-- `catalog.json`: KDP-sourced structured catalog with 32 records, format statuses, ASINs, and cover paths.
-- `index.template.html` + `build_site.py`: build system so book information only lives in the structured catalog.
-- `COVER_MANIFEST.csv`: exact mapping from uploaded source files to published site assets.
+## Publishing this site
 
-The separate `harborcity_filler_with_covers.html` is a self-contained, larger **preview**, with images embedded in the HTML itself. It is *not* the recommended GitHub version; this ZIP is.
+When deployment is authorized, upload `index.html`, `catalog.json`, and the `assets/` folder to the actual public web root. Do not upload the original 40 MB cover masters; the web covers inside `assets/covers` are already optimized. Verify the active GitHub Pages repository and DNS setup first; GoDaddy may be only the domain registrar.
 
-## Local preview
+The `https://harborcityusa.com/assets/harbor-city-archive-share.jpg` Open Graph image URL becomes valid after these files are deployed to that domain. In an offline preview, chat or social link cards cannot resolve the production URL.
 
-Unzip the folder, then open `index.html` in Chrome or Firefox. All covers are relative to `assets/covers/`, so if you only copy the HTML without the assets the images will not display.
+## Source of truth / adding books
 
-For a local web server, from this directory run:
+`catalog.json` is the master data source for titles, subtitles, pen names, series numbers, Kindle/paperback/hardcover statuses, ASINs, available cover paths, short descriptions, audience labels, and future connected-record arrays. Data originated from the user's Nov. 2026 KDP Bookshelf export, with audience categories conservatively derived from the SHIVA reading-pipeline inventory; these should receive an editorial review.
 
-```sh
-python3 -m http.server 8000
+To regenerate the raw HTML and Book JSON-LD after editing `catalog.json`, run:
+
+```
+python3 build_revision.py
 ```
 
-Then visit `http://localhost:8000/` on that computer.
+Python 3 with `beautifulsoup4` and `Pillow` is required for the provided generator, but NOT for viewing or hosting the final site. `base_index.html` contains the original interim site scaffold. The generator creates `index.html`, the social share image, and the favicon. For an expanded catalog, add a shelf definition and any verified excerpt to `build_revision.py`; eventually it will be cleaner to move shelf metadata to `series.json`.
 
-## GitHub Pages, later
+## Functional behavior
 
-1. First identify the repository that currently serves HarborCityUSA.com and the publishing branch/folder.
-2. Back up the current site (`index.html` and related assets) before overwriting anything.
-3. Copy `index.html` and the **entire** `assets/covers/` directory from this package into the actual published directory.
-4. Keep `.nojekyll` if the repository already uses it. Ensure domain configuration such as `CNAME` remains intact.
-5. Commit to the branch only when you're ready. Don't change GoDaddy DNS settings unless the existing hosting configuration requires it.
+- 32 book cards and all available Amazon links are present in raw HTML, not created client-side.
+- Every title has a `schema.org/Book` JSON-LD declaration with author, series and canonical Amazon link.
+- Reader pathway cards, recent filings, format links, optional filing order and manuscript excerpt panels work without JavaScript.
+- JavaScript adds book search, series/author/audience filters, random record selection, and automatically expires the “NEWLY RECOVERED” stamp after 30 days. With JavaScript disabled, all records remain browsable; time-sensitive stamps are not displayed.
+- “Recently filed” is based on the latest KDP format-submission date available. It must NOT be mistaken for original publication date.
+- `The Eighth File` Kindle is labeled preorder according to the supplied Nov. 2026 KDP record; confirm its current status at deployment.
+- `The Unbreakable Fool` appears live in the KDP export, but the author previously indicated a pause/rewrite. Decide whether it should be publicly promoted before deployment.
 
-The build-support files can also live in the repository, but GitHub Pages only needs `index.html` and the cover assets for this temporary page.
+## Mailing form & pending editorial decisions
 
-## Updating the catalog
+1. **Filing notices**: Kit public embed is installed once in the correspondence section (UID `3011d17545`) using the supplied official script. The archive site does not store emails itself. Confirm live signup, email confirmation, imprint tags, and unsubscribe flow after staging/deployment. A working internet connection is needed for the Kit form; the local offline preview cannot verify email delivery.
+2. **Next filing**: Short Shocks weekly cadence is known, but no verified next title/date was supplied. Current text clearly marks the next record unconfirmed.
+3. **Analytics**: Not installed; choose a privacy-friendly provider and verify its setup before adding scripts.
+4. **Connected records**: Future-ready `connectedRecords` arrays are empty. Add only verified relationships from the manuscripts or canon bible, and avoid revealing major plot connections prematurely.
+5. **Cover artwork**: The CLH Armor Grimoire Edition still needs its actual cover JPG/WebP. A “COVER PENDING INTAKE” placeholder appears in its place.
+6. **Descriptions**: Titles without a grounded one-line hook display “Summary awaiting intake.” Additional book blurbs can be added to `catalog.json` as they are verified.
+7. **Audience badges**: Editorial mapping is Middle Grade (Short Shocks), Teen (Vault Chronicles), YA (Receipt Society), Adult (Harbor Pier, Hydrogen Tapestry, Boy in the Balloon, Ire), Picture Book (Armor). Review this for parent-facing precision.
 
-Edit `catalog.json` and run:
+## Testing already performed
 
-```sh
-python3 build_site.py
-```
+Local Chromium DOM/interactivity tests at 320, 390 and 1280 CSS pixels report no JavaScript errors and no page-level horizontal overflow. Search returns one result for `afk kid`, and the empty result notice appears only after a zero-result query. In no-JavaScript mode, 32 book titles and 56 direct Amazon format links remain present and available in the document. A sample of small-text/background combinations was adjusted above 4.5:1 contrast; a full automated WCAG audit, keyboard screen-reader pass, and public social-card preview still need to occur before deployment.
 
-For a new cover, create a small WebP and put it in `assets/covers/`, then set the book's `cover` field to its relative path and rebuild. Preserve the original Kindle JPG in the publishing assets library. Use the cover manifest to keep matching exact rather than guessing by filename.
+## Files
 
-## Current editorial checks before public deployment
+- `index.html`: production static page
+- `catalog.json`: canonical structured book records
+- `assets/covers/*.webp`: optimized book fronts
+- `assets/harbor-city-archive-share.jpg`: 1200x630 social card
+- `assets/favicon.svg`: archive mark
+- `build_revision.py`: reproducible page generator
+- `base_index.html`: scaffold kept for regenerating
+- `COVER_MANIFEST.csv`: image correspondence list
 
-- KDP snapshot as provided November 1, 2026. Publication and format statuses may have changed.
-- **The Eighth File**: listed as Kindle preorder for November 2, 2026 in the supplied snapshot. Verify the current live status before launch.
-- **The Unbreakable Fool**: listed as Kindle live in the export, although the author has described holding it for rewriting. Confirm whether its site entry should be featured before launch.
-- **The CLH Armor Series**: Kindle book is in catalog; front cover image is missing from uploaded assets. A typographic placeholder remains.
-- **The QRA**: cover exists, but book is not in the supplied KDP catalog. It has intentionally **not** been displayed as a released title.
-- Some book hooks are awaiting supplied blurbs and deliberately show an archive-pending note.
-- All available ASINs link to `https://www.amazon.com/dp/<ASIN>`.
+## Filing Notices configuration
 
-**Do not upload the 41 MB original `harborcity_covers.tar.gz` to GitHub Pages.** The lightweight copies replace it on the site, without modifying the original artwork.
+- Official public Kit embed: `<script async data-uid="3011d17545" src="https://harbor-city-archives.kit.com/3011d17545/index.js"></script>`
+- Sending identity, as configured by site owner: `Harbor City Archives <records@harborcityusa.com>`
+- Editor-side checkboxes/tags: CL Vault, CL Seawall, CL Harbor, CL Ire, CL Armor.
+- The newsletter form is added by `build_revision.py`, so future page regenerations retain it.
+- Before sending campaigns, confirm the organization's physical mailing address in Kit, the live form's success/confirmation behavior, and privacy disclosures.
+- Do not add the form a second time; the footer links to `#filing-notices`.

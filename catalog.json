@@ -29,7 +29,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-mother-s-song.webp",
-    "hook": null
+    "hook": null,
+    "audience": "Adult",
+    "connectedRecords": []
   },
   {
     "id": "the-famine-of-the-father",
@@ -61,7 +63,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-famine-of-the-father.webp",
-    "hook": null
+    "hook": null,
+    "audience": "Adult",
+    "connectedRecords": []
   },
   {
     "id": "the-gensysloop",
@@ -93,7 +97,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-gensysloop.webp",
-    "hook": null
+    "hook": null,
+    "audience": "Adult",
+    "connectedRecords": []
   },
   {
     "id": "the-coherence-tax",
@@ -125,7 +131,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-coherence-tax.webp",
-    "hook": null
+    "hook": null,
+    "audience": "Adult",
+    "connectedRecords": []
   },
   {
     "id": "the-spite-engine",
@@ -157,7 +165,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-spite-engine.webp",
-    "hook": "Two cosmic brothers learn their rivalry may have been engineered to feed the one who made them."
+    "hook": "Two cosmic brothers learn their rivalry may have been engineered to feed the one who made them.",
+    "audience": "Adult",
+    "connectedRecords": []
   },
   {
     "id": "the-convergence",
@@ -189,7 +199,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-convergence.webp",
-    "hook": null
+    "hook": null,
+    "audience": "Adult",
+    "connectedRecords": []
   },
   {
     "id": "the-warmth-index",
@@ -221,7 +233,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-warmth-index.webp",
-    "hook": null
+    "hook": null,
+    "audience": "YA",
+    "connectedRecords": []
   },
   {
     "id": "the-launch-window",
@@ -253,7 +267,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-launch-window.webp",
-    "hook": null
+    "hook": null,
+    "audience": "Teen",
+    "connectedRecords": []
   },
   {
     "id": "the-unbreakable-fool",
@@ -285,7 +301,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-unbreakable-fool.webp",
-    "hook": "The black box beneath the mythology: hums, bunkers, orbit, survival math, and a record that refuses to vanish."
+    "hook": "The black box beneath the mythology: hums, bunkers, orbit, survival math, and a record that refuses to vanish.",
+    "audience": "Adult",
+    "connectedRecords": []
   },
   {
     "id": "your-mother-deserves-this",
@@ -317,7 +335,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/your-mother-deserves-this.webp",
-    "hook": null
+    "hook": null,
+    "audience": "Adult",
+    "connectedRecords": []
   },
   {
     "id": "yesterdays-oil",
@@ -349,7 +369,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/yesterdays-oil.webp",
-    "hook": null
+    "hook": null,
+    "audience": "Adult",
+    "connectedRecords": []
   },
   {
     "id": "salt-radius",
@@ -381,7 +403,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/salt-radius.webp",
-    "hook": null
+    "hook": null,
+    "audience": "Adult",
+    "connectedRecords": []
   },
   {
     "id": "the-maintenance-window",
@@ -413,7 +437,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-maintenance-window.webp",
-    "hook": "Seawall sensors rise inside “acceptable variance.” Then a camera displays February 30."
+    "hook": "Seawall sensors rise inside “acceptable variance.” Then a camera displays February 30.",
+    "audience": "Adult",
+    "connectedRecords": []
   },
   {
     "id": "the-kindness-file",
@@ -445,7 +471,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-kindness-file.webp",
-    "hook": null
+    "hook": null,
+    "audience": "YA",
+    "connectedRecords": []
   },
   {
     "id": "the-return-stamp",
@@ -477,7 +505,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-return-stamp.webp",
-    "hook": null
+    "hook": null,
+    "audience": "YA",
+    "connectedRecords": []
   },
   {
     "id": "soot-season",
@@ -509,7 +539,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/soot-season.webp",
-    "hook": "Six girls start keeping records when the city begins rewriting posts, identities, and permission."
+    "hook": "Six girls start keeping records when the city begins rewriting posts, identities, and permission.",
+    "audience": "YA",
+    "connectedRecords": []
   },
   {
     "id": "the-stone-spine",
@@ -541,7 +573,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-stone-spine.webp",
-    "hook": null
+    "hook": null,
+    "audience": "Adult",
+    "connectedRecords": []
   },
   {
     "id": "the-immortal-stalk",
@@ -573,7 +607,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-immortal-stalk.webp",
-    "hook": null
+    "hook": null,
+    "audience": "Adult",
+    "connectedRecords": []
   },
   {
     "id": "the-first-lift",
@@ -605,7 +641,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-first-lift.webp",
-    "hook": "A boy cast out from his community meets a builder experimenting with flight and follows a hum toward the coast."
+    "hook": "A boy cast out from his community meets a builder experimenting with flight and follows a hum toward the coast.",
+    "audience": "Adult",
+    "connectedRecords": []
   },
   {
     "id": "station-zero",
@@ -637,7 +675,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/station-zero.webp",
-    "hook": null
+    "hook": null,
+    "audience": "Teen",
+    "connectedRecords": []
   },
   {
     "id": "the-siren-in-the-screen",
@@ -669,7 +709,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-siren-in-the-screen.webp",
-    "hook": null
+    "hook": null,
+    "audience": "Teen",
+    "connectedRecords": []
   },
   {
     "id": "the-static-clown",
@@ -701,7 +743,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-static-clown.webp",
-    "hook": "A ghostly mime becomes the center of a mystery for kids who do not know what a mime is."
+    "hook": "A ghostly mime becomes the center of a mystery for kids who do not know what a mime is.",
+    "audience": "Teen",
+    "connectedRecords": []
   },
   {
     "id": "the-hatch-in-the-hollow",
@@ -733,7 +777,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-hatch-in-the-hollow.webp",
-    "hook": "Detention, an empty closet, an impossible mark, and a hatch where no hatch should be."
+    "hook": "Detention, an empty closet, an impossible mark, and a hatch where no hatch should be.",
+    "audience": "Teen",
+    "connectedRecords": []
   },
   {
     "id": "the-eighth-file",
@@ -765,7 +811,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-eighth-file.webp",
-    "hook": null
+    "hook": null,
+    "audience": "Middle Grade",
+    "connectedRecords": []
   },
   {
     "id": "hello-world",
@@ -797,7 +845,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/hello-world.webp",
-    "hook": null
+    "hook": null,
+    "audience": "Middle Grade",
+    "connectedRecords": []
   },
   {
     "id": "frequency-of-the-fallen",
@@ -829,7 +879,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/frequency-of-the-fallen.webp",
-    "hook": "The next Short Shocks protagonist encounters the continuing machinery beneath Harbor City."
+    "hook": "The next Short Shocks protagonist encounters the continuing machinery beneath Harbor City.",
+    "audience": "Middle Grade",
+    "connectedRecords": []
   },
   {
     "id": "cove-titan",
@@ -861,7 +913,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/cove-titan.webp",
-    "hook": "A new protagonist hears a hum that Harbor City has not explained."
+    "hook": "A new protagonist hears a hum that Harbor City has not explained.",
+    "audience": "Middle Grade",
+    "connectedRecords": []
   },
   {
     "id": "low-tide-lullaby",
@@ -893,7 +947,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/low-tide-lullaby.webp",
-    "hook": "A missing child and a hidden mechanism beneath the harbor pull the story toward older machinery."
+    "hook": "A missing child and a hidden mechanism beneath the harbor pull the story toward older machinery.",
+    "audience": "Middle Grade",
+    "connectedRecords": []
   },
   {
     "id": "found-fort",
@@ -925,7 +981,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/found-fort.webp",
-    "hook": "A low-tech fort with Arduino security sits beside a junkyard that is not behaving normally."
+    "hook": "A low-tech fort with Arduino security sits beside a junkyard that is not behaving normally.",
+    "audience": "Middle Grade",
+    "connectedRecords": []
   },
   {
     "id": "officer-yield",
@@ -957,7 +1015,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/officer-yield.webp",
-    "hook": "An animatronic experiment and a stolen traffic-camera AI turn into procedural horror."
+    "hook": "An animatronic experiment and a stolen traffic-camera AI turn into procedural horror.",
+    "audience": "Middle Grade",
+    "connectedRecords": []
   },
   {
     "id": "the-afk-kid",
@@ -989,7 +1049,9 @@
       "scheduledReleaseDate": null
     },
     "cover": "assets/covers/the-afk-kid.webp",
-    "hook": "A VR headset can run Sam’s real body while he is in-game. The machine may be better at being him than he is."
+    "hook": "A VR headset can run Sam’s real body while he is in-game. The machine may be better at being him than he is.",
+    "audience": "Middle Grade",
+    "connectedRecords": []
   },
   {
     "id": "the-clh-armor-series",
@@ -1021,6 +1083,8 @@
       "scheduledReleaseDate": null
     },
     "cover": null,
-    "hook": "Bedtime-sized monsters and counter-spells introduce young readers to feelings, truth, and boundaries."
+    "hook": "Bedtime-sized monsters and counter-spells introduce young readers to feelings, truth, and boundaries.",
+    "audience": "Picture Book",
+    "connectedRecords": []
   }
 ]
