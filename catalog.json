@@ -1,0 +1,1026 @@
+[
+  {
+    "id": "the-mother-s-song",
+    "title": "The Mother's Song",
+    "subtitle": "The 505 Chronicles Through Time",
+    "author": "CL Ire",
+    "series": "CL Ire / The 505 Chronicles",
+    "seriesNumber": null,
+    "family": "ire",
+    "kindle": {
+      "status": "live",
+      "asin": "B0H92X6B16",
+      "priceUSD": 4.99,
+      "submitted": "July 16, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "the-famine-of-the-father",
+    "title": "The Famine of The Father",
+    "subtitle": "The Hydrogen Tapestry Book 4",
+    "author": "CL Harbor",
+    "series": "The Hydrogen Tapestry",
+    "seriesNumber": 4,
+    "family": "hydrogen",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GPWF8HS3",
+      "priceUSD": 4.99,
+      "submitted": "February 24, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "the-gensysloop",
+    "title": "The GenSysLoop",
+    "subtitle": "The Hydrogen Tapestry Book 3",
+    "author": "CL Harbor",
+    "series": "The Hydrogen Tapestry",
+    "seriesNumber": 3,
+    "family": "hydrogen",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GPSWZ2PY",
+      "priceUSD": 4.99,
+      "submitted": "February 24, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GVDV89XK",
+      "priceUSD": 17.99,
+      "submitted": "March 30, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "the-coherence-tax",
+    "title": "The Coherence Tax",
+    "subtitle": "The Hydrogen Tapestry Book 2",
+    "author": "CL Harbor",
+    "series": "The Hydrogen Tapestry",
+    "seriesNumber": 2,
+    "family": "hydrogen",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GKNWLNMV",
+      "priceUSD": 4.99,
+      "submitted": "January 30, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GPXWLR4R",
+      "priceUSD": 17.99,
+      "submitted": "February 24, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "the-spite-engine",
+    "title": "The Spite Engine",
+    "subtitle": "The Hydrogen Tapestry Book 1",
+    "author": "CL Harbor",
+    "series": "The Hydrogen Tapestry",
+    "seriesNumber": 1,
+    "family": "hydrogen",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GKDGCP1P",
+      "priceUSD": 4.99,
+      "submitted": "January 31, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GPVYJG3W",
+      "priceUSD": 17.99,
+      "submitted": "February 24, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "draft",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": "Two cosmic brothers learn their rivalry may have been engineered to feed the one who made them."
+  },
+  {
+    "id": "the-convergence",
+    "title": "The Convergence",
+    "subtitle": "The Hydrogen Tapestry Book 5",
+    "author": "CL Harbor",
+    "series": "The Hydrogen Tapestry",
+    "seriesNumber": 5,
+    "family": "hydrogen",
+    "kindle": {
+      "status": "live",
+      "asin": "B0HQ1B8KQV",
+      "priceUSD": 9.99,
+      "submitted": "November 1, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "the-warmth-index",
+    "title": "The Warmth Index",
+    "subtitle": "Harbor Mystery 6 Book 4",
+    "author": "CL Seawall",
+    "series": "The Harbor Six Mysteries",
+    "seriesNumber": 4,
+    "family": "receipts",
+    "kindle": {
+      "status": "live",
+      "asin": "B0HPY3925D",
+      "priceUSD": 5.99,
+      "submitted": "October 31, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0HPZ8Z96R",
+      "priceUSD": 13.99,
+      "submitted": "November 1, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "the-launch-window",
+    "title": "The Launch Window",
+    "subtitle": "Vault Chronicles #5",
+    "author": "CL Vault",
+    "series": "Vault Chronicles",
+    "seriesNumber": 5,
+    "family": "vault",
+    "kindle": {
+      "status": "live",
+      "asin": "B0H4FDYWCR",
+      "priceUSD": 4.99,
+      "submitted": "June 8, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0HPZ7DBPQ",
+      "priceUSD": 11.99,
+      "submitted": "November 1, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "the-unbreakable-fool",
+    "title": "The Unbreakable Fool",
+    "subtitle": "A Harbor City Memoir The Book of Earl",
+    "author": "CL Ire",
+    "series": "CL Ire / The 505 Chronicles",
+    "seriesNumber": null,
+    "family": "ire",
+    "kindle": {
+      "status": "live",
+      "asin": "B0H92FG4S9",
+      "priceUSD": 4.99,
+      "submitted": "July 15, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": "The black box beneath the mythology: hums, bunkers, orbit, survival math, and a record that refuses to vanish."
+  },
+  {
+    "id": "your-mother-deserves-this",
+    "title": "Your mother deserves this",
+    "subtitle": "Harbor Pier, A Harbor City Book: #4",
+    "author": "CL Harbor",
+    "series": "Harbor Pier",
+    "seriesNumber": 4,
+    "family": "pier",
+    "kindle": {
+      "status": "live",
+      "asin": "B0H8X59KJC",
+      "priceUSD": 3.99,
+      "submitted": "July 15, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "yesterdays-oil",
+    "title": "Yesterdays Oil",
+    "subtitle": "Harbor Pier, A Harbor City Book: #3",
+    "author": "CL Harbor",
+    "series": "Harbor Pier",
+    "seriesNumber": 3,
+    "family": "pier",
+    "kindle": {
+      "status": "live",
+      "asin": "B0F22LWB8P",
+      "priceUSD": 2.99,
+      "submitted": "March 29, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "salt-radius",
+    "title": "Salt Radius",
+    "subtitle": "Harbor Pier, A Harbor City Book: #2",
+    "author": "CL Harbor",
+    "series": "Harbor Pier",
+    "seriesNumber": 2,
+    "family": "pier",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GHP1B2C3",
+      "priceUSD": 2.99,
+      "submitted": "March 29, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "the-maintenance-window",
+    "title": "The Maintenance Window",
+    "subtitle": "Harbor Pier, A Harbor City Book: #1",
+    "author": "CL Harbor",
+    "series": "Harbor Pier",
+    "seriesNumber": 1,
+    "family": "pier",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GHSWH3GN",
+      "priceUSD": 2.99,
+      "submitted": "March 28, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": "Seawall sensors rise inside “acceptable variance.” Then a camera displays February 30."
+  },
+  {
+    "id": "the-kindness-file",
+    "title": "The Kindness File",
+    "subtitle": "The Harbor Six Mysteries, Book 3",
+    "author": "CL Seawall",
+    "series": "The Harbor Six Mysteries",
+    "seriesNumber": 3,
+    "family": "receipts",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GHZN2RP8",
+      "priceUSD": 5.99,
+      "submitted": "March 7, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GVFDFJDP",
+      "priceUSD": 13.99,
+      "submitted": "March 30, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "the-return-stamp",
+    "title": "The Return Stamp",
+    "subtitle": "The Harbor Six Mysteries, Book 2",
+    "author": "CL Seawall",
+    "series": "The Harbor Six Mysteries",
+    "seriesNumber": 2,
+    "family": "receipts",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GL5B4W4P",
+      "priceUSD": 5.99,
+      "submitted": "February 3, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GS29ZJVH",
+      "priceUSD": 13.99,
+      "submitted": "March 10, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "soot-season",
+    "title": "Soot Season",
+    "subtitle": "The Harbor Six Mysteries, Book 1",
+    "author": "CL Seawall",
+    "series": "The Harbor Six Mysteries",
+    "seriesNumber": 1,
+    "family": "receipts",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GL2H7K3J",
+      "priceUSD": 5.99,
+      "submitted": "February 2, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GS2MV3JQ",
+      "priceUSD": 12.99,
+      "submitted": "March 10, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": "Six girls start keeping records when the city begins rewriting posts, identities, and permission."
+  },
+  {
+    "id": "the-stone-spine",
+    "title": "The Stone Spine",
+    "subtitle": "The Boy in the Balloon: Chronicles Through Time, Book 3",
+    "author": "CL Ire",
+    "series": "The Boy in the Balloon",
+    "seriesNumber": 3,
+    "family": "balloon",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GSNDST3L",
+      "priceUSD": 5.99,
+      "submitted": "March 15, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GVF6XHJB",
+      "priceUSD": 14.99,
+      "submitted": "March 30, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "the-immortal-stalk",
+    "title": "The Immortal Stalk",
+    "subtitle": "The Boy in the Balloon: Chronicles Through Time, Book 2",
+    "author": "CL Ire",
+    "series": "The Boy in the Balloon",
+    "seriesNumber": 2,
+    "family": "balloon",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GSMQHDGK",
+      "priceUSD": 5.99,
+      "submitted": "March 15, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GVDXGV81",
+      "priceUSD": 14.99,
+      "submitted": "March 30, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "the-first-lift",
+    "title": "The First Lift",
+    "subtitle": "The Boy in the Balloon: Chronicles Through Time, Book 1",
+    "author": "CL Ire",
+    "series": "The Boy in the Balloon",
+    "seriesNumber": 1,
+    "family": "balloon",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GS7C96XW",
+      "priceUSD": 5.99,
+      "submitted": "March 11, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GS9PQNTB",
+      "priceUSD": 14.99,
+      "submitted": "March 12, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": "A boy cast out from his community meets a builder experimenting with flight and follows a hum toward the coast."
+  },
+  {
+    "id": "station-zero",
+    "title": "Station Zero",
+    "subtitle": "Vault Chronicles #4",
+    "author": "CL Vault",
+    "series": "Vault Chronicles",
+    "seriesNumber": 4,
+    "family": "vault",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GTS87NX4",
+      "priceUSD": 4.99,
+      "submitted": "March 25, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0HPXBDZS7",
+      "priceUSD": 11.99,
+      "submitted": "October 31, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "the-siren-in-the-screen",
+    "title": "The Siren in the Screen",
+    "subtitle": "Vault Chronicles #3",
+    "author": "CL Vault",
+    "series": "Vault Chronicles",
+    "seriesNumber": 3,
+    "family": "vault",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GRMHSSRW",
+      "priceUSD": 4.99,
+      "submitted": "March 7, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GSBDFMNQ",
+      "priceUSD": 11.99,
+      "submitted": "March 12, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "the-static-clown",
+    "title": "The Static Clown",
+    "subtitle": "Vault Chronicles #2",
+    "author": "CL Vault",
+    "series": "Vault Chronicles",
+    "seriesNumber": 2,
+    "family": "vault",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GL7341HZ",
+      "priceUSD": 4.99,
+      "submitted": "February 3, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GS2P81SL",
+      "priceUSD": 11.99,
+      "submitted": "March 10, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": "A ghostly mime becomes the center of a mystery for kids who do not know what a mime is."
+  },
+  {
+    "id": "the-hatch-in-the-hollow",
+    "title": "The Hatch in the Hollow",
+    "subtitle": "Vault Chronicles #1",
+    "author": "CL Vault",
+    "series": "Vault Chronicles",
+    "seriesNumber": 1,
+    "family": "vault",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GL7J81SJ",
+      "priceUSD": 4.99,
+      "submitted": "February 3, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GQKR4MWJ",
+      "priceUSD": 11.99,
+      "submitted": "February 28, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": "Detention, an empty closet, an impossible mark, and a hatch where no hatch should be."
+  },
+  {
+    "id": "the-eighth-file",
+    "title": "The Eighth File",
+    "subtitle": "Tales from the Vault: Short Shocks 8",
+    "author": "CL Vault",
+    "series": "Tales From the Vault: Short Shocks",
+    "seriesNumber": 8,
+    "family": "shocks",
+    "kindle": {
+      "status": "preorder",
+      "asin": "B0HPR71F37",
+      "priceUSD": 2.99,
+      "submitted": null,
+      "scheduledReleaseDate": "November 2, 2026"
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0HPTPTF4Z",
+      "priceUSD": 9.99,
+      "submitted": "October 30, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "hello-world",
+    "title": "Hello World",
+    "subtitle": "Tales From the Vault: Short Shocks 7",
+    "author": "CL Vault",
+    "series": "Tales From the Vault: Short Shocks",
+    "seriesNumber": 7,
+    "family": "shocks",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GRPLDFXW",
+      "priceUSD": 2.99,
+      "submitted": "March 7, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GRVZWXN2",
+      "priceUSD": 9.99,
+      "submitted": "March 9, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": null
+  },
+  {
+    "id": "frequency-of-the-fallen",
+    "title": "Frequency of the Fallen",
+    "subtitle": "Tales From the Vault: Short Shocks 6",
+    "author": "CL Vault",
+    "series": "Tales From the Vault: Short Shocks",
+    "seriesNumber": 6,
+    "family": "shocks",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GRPLMJ7S",
+      "priceUSD": 2.99,
+      "submitted": "March 7, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GS2CH6QG",
+      "priceUSD": 9.99,
+      "submitted": "March 10, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": "The next Short Shocks protagonist encounters the continuing machinery beneath Harbor City."
+  },
+  {
+    "id": "cove-titan",
+    "title": "Cove Titan",
+    "subtitle": "Tales From the Vault: Short Shocks 5",
+    "author": "CL Vault",
+    "series": "Tales From the Vault: Short Shocks",
+    "seriesNumber": 5,
+    "family": "shocks",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GRPV4WB9",
+      "priceUSD": 2.99,
+      "submitted": "March 7, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GS2B751D",
+      "priceUSD": 9.99,
+      "submitted": "March 10, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": "A new protagonist hears a hum that Harbor City has not explained."
+  },
+  {
+    "id": "low-tide-lullaby",
+    "title": "Low Tide Lullaby",
+    "subtitle": "Tales From the Vault: Short Shocks: 4",
+    "author": "CL Vault",
+    "series": "Tales From the Vault: Short Shocks",
+    "seriesNumber": 4,
+    "family": "shocks",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GQNVM3HJ",
+      "priceUSD": 2.99,
+      "submitted": "February 28, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GRVFG8B3",
+      "priceUSD": 9.99,
+      "submitted": "March 9, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": "A missing child and a hidden mechanism beneath the harbor pull the story toward older machinery."
+  },
+  {
+    "id": "found-fort",
+    "title": "Found Fort",
+    "subtitle": "Tales From the Vault: Short Shocks 3",
+    "author": "CL Vault",
+    "series": "Tales From the Vault: Short Shocks",
+    "seriesNumber": 3,
+    "family": "shocks",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GNP1RCYJ",
+      "priceUSD": 2.99,
+      "submitted": "February 16, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GRVC8S4Y",
+      "priceUSD": 9.99,
+      "submitted": "March 9, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": "A low-tech fort with Arduino security sits beside a junkyard that is not behaving normally."
+  },
+  {
+    "id": "officer-yield",
+    "title": "Officer Yield",
+    "subtitle": "Tales From the Vault: Short Shocks 2",
+    "author": "CL Vault",
+    "series": "Tales From the Vault: Short Shocks",
+    "seriesNumber": 2,
+    "family": "shocks",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GNJ13WZJ",
+      "priceUSD": 2.99,
+      "submitted": "February 14, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GRV6FYFV",
+      "priceUSD": 9.99,
+      "submitted": "March 9, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": "An animatronic experiment and a stolen traffic-camera AI turn into procedural horror."
+  },
+  {
+    "id": "the-afk-kid",
+    "title": "The AFK Kid",
+    "subtitle": "Tales From the Vault: Short Shocks 1",
+    "author": "CL Vault",
+    "series": "Tales From the Vault: Short Shocks",
+    "seriesNumber": 1,
+    "family": "shocks",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GMP4XB29",
+      "priceUSD": 2.99,
+      "submitted": "February 10, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GRV57LNP",
+      "priceUSD": 9.99,
+      "submitted": "March 9, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": "A VR headset can run Sam’s real body while he is in-game. The machine may be better at being him than he is."
+  },
+  {
+    "id": "the-clh-armor-series",
+    "title": "The CLH Armor Series",
+    "subtitle": "Grimoire Edition",
+    "author": "CL Armor",
+    "series": "CLH Armor",
+    "seriesNumber": 1,
+    "family": "armor",
+    "kindle": {
+      "status": "live",
+      "asin": "B0GS7D6T9W",
+      "priceUSD": 3.99,
+      "submitted": "March 12, 2026",
+      "scheduledReleaseDate": null
+    },
+    "paperback": {
+      "status": "live",
+      "asin": "B0GS9R4X9V",
+      "priceUSD": 29.99,
+      "submitted": "March 12, 2026",
+      "scheduledReleaseDate": null
+    },
+    "hardcover": {
+      "status": "unavailable",
+      "asin": null,
+      "priceUSD": null,
+      "submitted": null,
+      "scheduledReleaseDate": null
+    },
+    "cover": null,
+    "hook": "Bedtime-sized monsters and counter-spells introduce young readers to feelings, truth, and boundaries."
+  }
+]
