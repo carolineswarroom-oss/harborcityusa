@@ -1,5 +1,11 @@
 
 /* Records Office / site v3 */
+/* Public description intake, November 2026 */
+.paper-panel>p,.full-description p{line-height:1.7;margin:.8rem 0;color:#344b4d}
+.full-description{margin-top:1.1rem;padding-top:.85rem;border-top:1px solid #c9d4c8}
+.full-description summary{font:700 .78rem/1.5 ui-monospace,Consolas,monospace;color:#28605d;cursor:pointer;padding:.45rem .25rem;letter-spacing:.01em}
+.full-description summary:focus-visible{outline:3px solid #b17b41;outline-offset:3px}
+
 :root{--rule:#c6cbbb}
 .registry-strip{background:#e4ebe5;border-block:1px solid #c7d7cd}
 .registry-inner{display:flex;align-items:center;gap:1.7rem;flex-wrap:wrap;min-height:68px;padding-block:.7rem}
