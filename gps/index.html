@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101b27" />
+  <meta name="description" content="General Production Solutions (GPS) supports oil and gas production with downhole pumps, tubing anchors, tubulars, rod-string equipment, pump-shop service, and field coordination." />
+  <title>GPS | General Production Solutions</title>
+  <style>
+    :root { --ink:#152230;--navy:#101b27;--navy2:#1a2a39;--muted:#5a6978;--cream:#f6f5f1;--white:#fff;--gold:#eebc52;--gold2:#f7d78f;--stroke:#dce1e3;--shadow:0 24px 56px rgba(16,27,39,.12); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--cream); color:var(--ink); font-family:Inter,"Segoe UI",Arial,sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+    button { font:inherit; }
+    :focus-visible { outline:3px solid var(--gold);outline-offset:4px; }
+    .container { max-width:1180px; margin-inline:auto; padding-inline:28px; }
+    .eyebrow { font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.16em; }
+    .gold { color:var(--gold); }
+    .site-header { position:sticky;top:0;z-index:20; background:#101b27f2;backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.10);color:#fff; }
+    .nav-inner { min-height:83px;display:flex;align-items:center;justify-content:space-between;gap:20px; }
+    .brand { display:flex; align-items:center; gap:13px; min-width:0; }
+    .brand-mark { width:46px; height:46px; display:grid;place-items:center; border:1.5px solid rgba(238,188,82,.65); border-radius:50%; position:relative; flex-shrink:0; }
+    .brand-mark svg { width:25px;height:25px; }
+    .brand-name {font-size:24px; font-weight:900; letter-spacing:-.075em;line-height:.96;}
+    .brand-caption {font-size:9px;font-weight:800;letter-spacing:.165em;text-transform:uppercase;color:#b6c1cb;margin-top:6px;white-space:nowrap;}
+    .nav-links { display:flex;align-items:center;gap:32px; }
+    .nav-links a { font-size:13px; font-weight:750; color:#cbd4db;transition:color .2s;}
+    .nav-links a:hover { color:var(--gold); }
+    .btn { display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:14px 22px;border-radius:5px;font-size:13px;font-weight:850;letter-spacing:.015em;transition:transform .2s,background .2s,color .2s; }
+    .btn:hover { transform:translateY(-2px); }
+    .btn-gold { background:var(--gold);color:#14202a; }
+    .btn-gold:hover { background:var(--gold2); }
+    .btn-ghost { border:1px solid rgba(255,255,255,.38); color:#fff; }
+    .btn-ghost:hover { border-color:var(--gold);color:var(--gold); }
+    .mobile-toggle { display:none;border:1px solid #526171;background:transparent;color:white;padding:10px;border-radius:5px;cursor:pointer; }
+    .hero { color:#fff; background:radial-gradient(ellipse at 75% 5%,#2a4050 0%,transparent 53%),linear-gradient(125deg,#101b27,#192c3b 70%,#0e1a26); overflow:hidden;position:relative; }
+    .hero::after { content:"";position:absolute;inset:0;background:repeating-linear-gradient(118deg,transparent 0 140px,rgba(255,255,255,.012) 141px 142px);pointer-events:none; }
+    .hero-inner { position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr);align-items:center; gap:64px; min-height:632px; padding-block:84px 95px; }
+    .hero h1 {font-size:clamp(46px,5.3vw,77px);letter-spacing:-.065em;line-height:1.04; margin:20px 0 24px;font-weight:860;max-width:690px;}
+    .hero h1 span {color:var(--gold);}
+    .hero-copy { color:#c8d3dd;font-size:17px;line-height:1.75;max-width:540px;margin:0 0 30px; }
+    .hero-actions {display:flex;flex-wrap:wrap;gap:12px;}
+    .trustline { color:#abb9c6; font-size:12px;letter-spacing:.02em;margin-top:33px;display:flex;align-items:center;gap:12px; }
+    .trustline:before {content:"";width:25px;height:1px;background:var(--gold);}
+    .technical-panel { position:relative; isolation:isolate; min-height:420px; border:1px solid rgba(255,255,255,.18);border-radius:7px; background:linear-gradient(165deg,#223746,#102331);box-shadow:0 30px 70px rgba(0,0,0,.25);overflow:hidden; }
+    .technical-panel:before {content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(238,188,82,.055) 1px,transparent 1px),linear-gradient(rgba(238,188,82,.055) 1px,transparent 1px);background-size:40px 40px; }
+    .panel-top {position:absolute;z-index:2;left:24px;right:24px;top:22px;display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#b7c6d2;font-weight:800; }
+    .panel-dot { width:7px;height:7px;background:var(--gold);display:inline-block;border-radius:50%;margin-right:9px; }
+    .panel-drawing {position:absolute;inset:48px 10px 35px;display:grid;place-items:center;}
+    .panel-drawing svg {width:100%;height:100%;max-width:470px;}
+    .panel-bottom { position:absolute;bottom:0;left:0;right:0; background:linear-gradient(90deg,#eebc52,#f7d78f);padding:17px 24px;color:#1b2a34;display:flex;align-items:center;justify-content:space-between;gap:10px;font-weight:850;font-size:12px;letter-spacing:.08em;text-transform:uppercase; }
+    .strip { background:var(--gold); color:#172431; }
+    .strip-inner {display:flex;align-items:center;justify-content:space-between;gap:18px;padding-block:20px;flex-wrap:wrap;}
+    .strip-lead {font-weight:850;font-size:15px;letter-spacing:-.01em;}
+    .strip-items {display:flex;gap:24px;flex-wrap:wrap;font-size:12px;font-weight:800;letter-spacing:.03em;}
+    .strip-items span:not(:last-child):after {content:"/";margin-left:24px;opacity:.45;}
+    section {scroll-margin-top:85px;}
+    .section-head {max-width:770px;margin-bottom:42px;}
+    .section-head h2 {font-size:clamp(34px,4vw,52px);letter-spacing:-.055em;line-height:1.12;margin:14px 0 14px;}
+    .section-head p {color:var(--muted);font-size:16px;line-height:1.7;margin:0;}
+    .services {padding-block:94px 105px;}
+    .cards {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;}
+    .service-card {background:#fff;border:1px solid var(--stroke);padding:30px 27px 27px;min-height:270px;transition:transform .2s,box-shadow .2s;}
+    .service-card:hover {transform:translateY(-4px);box-shadow:var(--shadow);}
+    .number {font-size:11px;font-weight:850;letter-spacing:.12em;color:#ad8032;}
+    .service-icon {width:48px;height:48px;background:#f6edd9;border-radius:5px;display:grid;place-items:center;margin:22px 0 18px;}
+    .service-icon svg {width:28px;height:28px;stroke:#8d651e;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+    .service-card h3 {font-size:21px;letter-spacing:-.035em;margin:0 0 10px;}
+    .service-card p {font-size:14px;color:var(--muted);line-height:1.7;margin:0;}
+    .value {background:#e8ecec;padding-block:84px;}
+    .value-grid {display:grid;grid-template-columns:.95fr 1.05fr;gap:75px;align-items:center;}
+    .value h2 {font-size:clamp(34px,4vw,51px);line-height:1.12;letter-spacing:-.053em;margin:16px 0 18px;}
+    .value p {color:#5a6978;line-height:1.8;font-size:15px;}
+    .vertical-rule {height:2px;width:70px;background:var(--gold);margin:22px 0;}
+    .steps {display:grid;gap:0;}
+    .step {display:grid;grid-template-columns:54px 1fr;gap:14px;border-bottom:1px solid #cbd4d8;padding:22px 0;}
+    .step:first-child {padding-top:0;}
+    .step:last-child {border:0;padding-bottom:0;}
+    .step-index {font-weight:900;color:#9b7429;font-size:22px;letter-spacing:-.04em;}
+    .step h3 {margin:0 0 8px;font-size:18px;letter-spacing:-.025em;}
+    .step p {margin:0;font-size:14px;}
+    .about {padding-block:92px 96px;background:#fff;}
+    .about-grid {display:grid;grid-template-columns:1.1fr .9fr;gap:85px;align-items:center;}
+    .about h2 {font-size:clamp(32px,4vw,49px);letter-spacing:-.055em;line-height:1.13;margin:14px 0 22px;}
+    .about p {color:var(--muted);line-height:1.85;font-size:16px;}
+    .about-aside {border-left:4px solid var(--gold);background:var(--cream);padding:34px 36px;}
+    .about-aside .eyebrow {color:#a67a26;}
+    .about-aside blockquote {margin:16px 0;font-size:27px;line-height:1.3;letter-spacing:-.045em;font-weight:850;}
+    .about-aside small {color:var(--muted);line-height:1.6;display:block;font-size:13px;}
+    .contact {padding-block:88px 90px;background:var(--navy);color:white;position:relative;overflow:hidden;}
+    .contact:after {content:"GPS";position:absolute;right:-40px;bottom:-110px;font-size:360px;font-weight:900;letter-spacing:-.09em;color:rgba(255,255,255,.018);pointer-events:none;}
+    .contact-inner {position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:75px;align-items:center;}
+    .contact h2 {font-size:clamp(36px,4.5vw,57px);letter-spacing:-.06em;line-height:1.12;margin:14px 0;}
+    .contact p {color:#bac9d4;line-height:1.7;font-size:15px;max-width:550px;}
+    .contact-card {background:#1c2d3b;border:1px solid #3a4c5c;padding:30px;border-radius:6px;}
+    .contact-card h3 {font-size:19px;margin:0 0 12px;}
+    .contact-card p {font-size:14px;margin:0 0 18px;}
+    .pending {border-top:1px solid #435565;padding-top:15px;font-size:12px;color:#b8c7d2;line-height:2.1;}
+    .pending span {display:block;}
+    footer {background:#0b151e;border-top:1px solid #263646;color:#9aabb9;padding-block:25px;}
+    .footer-inner {display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;font-size:12px;}
+    .footer-inner strong {color:#fff;}
+    .draft-note {background:#fff8e7;border-top:1px solid #f0d8a5;color:#684f1b;padding:15px 28px;text-align:center;font-size:12px;line-height:1.6;}
+    .draft-note strong {font-weight:850;}
+    @media(max-width:900px) { .hero-inner{grid-template-columns:1fr;gap:38px;padding-block:65px 72px;} .technical-panel{min-height:340px;max-width:650px;width:100%;} .cards{grid-template-columns:repeat(2,1fr);} .value-grid,.about-grid,.contact-inner{grid-template-columns:1fr;gap:35px;} .nav-links{gap:16px;} .nav-links a{font-size:12px;} }
+    @media(max-width:660px) { .container{padding-inline:20px;} .nav-inner{min-height:70px;} .brand-name{font-size:22px;} .brand-caption{font-size:8px;} .brand-mark{width:42px;height:42px;} .mobile-toggle{display:grid;place-items:center;} .nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:#132332;border-top:1px solid #344656;flex-direction:column;align-items:stretch;gap:0;padding:10px 20px 18px;} .nav-links.open{display:flex;} .nav-links a{font-size:15px;padding:15px 8px;border-bottom:1px solid #304253;} .nav-links .btn{margin-top:14px;} .hero-inner{padding-block:55px 60px;} .hero h1{font-size:clamp(43px,11.5vw,62px);} .hero-copy{font-size:15px;} .technical-panel{min-height:285px;} .panel-drawing{inset:40px 4px 26px;} .strip-items{gap:8px 16px;} .strip-items span:not(:last-child):after{margin-left:16px;} .services,.about{padding-block:70px;} .value,.contact{padding-block:65px;} .cards{grid-template-columns:1fr;} .service-card{min-height:auto;padding:25px;} .service-icon{margin:15px 0;} .section-head{margin-bottom:28px;} .contact-card{padding:24px;} .about-aside{padding:27px;} }
+    @media(prefers-reduced-motion:reduce) {html{scroll-behavior:auto;} *,*:before,*:after{transition:none!important;}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav-inner" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="GPS General Production Solutions, home">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 30 30" fill="none" stroke="#eebc52" stroke-width="1.7" stroke-linejoin="round"><circle cx="15" cy="15" r="10"/><path d="M18.5 11.5 21 9 17 18 9 21l2.7-8.5L21 9" fill="#eebc52" stroke="none"/><path d="m14.5 15.4 3.5 3.5" stroke="#172431" stroke-width="1"/></svg>
+        </div>
+        <div><div class="brand-name">GPS</div><div class="brand-caption">General Production Solutions</div></div>
+      </a>
+      <button class="mobile-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links" id="nav-toggle">
+        <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#services">Our Capabilities</a>
+        <a href="#approach">Our Approach</a>
+        <a href="#about">About GPS</a>
+        <a href="#contact" class="btn btn-gold">Talk to GPS <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <div class="eyebrow gold">General Production Solutions</div>
+          <h1 id="hero-title">Production challenges?<br><span>Let GPS guide the way.</span></h1>
+          <p class="hero-copy">Downhole pumping equipment, tubing anchors, tubulars, rod strings, and hands-on support. From the shop to the wellsite, GPS helps keep the right equipment and practical solutions moving.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#services">Explore Our Capabilities <span aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+          </div>
+          <div class="trustline">Built around real-world oilfield work.</div>
+        </div>
+        <div class="technical-panel" role="img" aria-label="Stylized technical illustration of a downhole rod pumping system and oilfield pumping unit">
+          <div class="panel-top"><span><i class="panel-dot"></i>Field to shop</span><span>GPS / Production systems</span></div>
+          <div class="panel-drawing">
+            <svg viewBox="0 0 500 380" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <g stroke="#668194" stroke-width="1.2" opacity=".45"><path d="M30 283H467M30 310H467M60 45V333M110 45V333M160 45V333M210 45V333M260 45V333M310 45V333M360 45V333M410 45V333"/></g>
+              <g stroke="#f1c772" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M86 198h260M101 198l18-70 60-23 101 43 22 50M127 195l23-48 60-23M178 105l9-21 120 46 14 32-15 8"/>
+                <path d="M156 140l-18-42 29-8 19 14M184 101l100 43"/><path d="M121 198v-48M298 198V149"/>
+                <path d="M129 198l25 19 28-19M247 199l-24 19-23-20" />
+                <path d="M338 194h43v17h-43zM360 211v37"/>
+              </g>
+              <g stroke="#c6d7e3" stroke-width="2" stroke-linecap="round" opacity=".85"><path d="M357 248v92M346 249h22M346 340h22"/><path d="M351 248v92M363 248v92"/></g>
+              <path d="M332 283h61l-10 67h-41z" fill="#1e3b4d" stroke="#eebc52" stroke-width="1.6"/>
+              <path d="M357 250v100" stroke="#eebc52" stroke-width="2.5"/><path d="M347 280h20v56h-20z" fill="#263f4d" stroke="#eebc52" stroke-width="1.4"/><path d="M347 289h20M347 327h20" stroke="#eebc52" stroke-width="1.2"/>
+              <g fill="#eebc52"><circle cx="357" cy="249" r="4"/><circle cx="357" cy="281" r="3"/><circle cx="357" cy="334" r="3"/></g>
+              <g fill="#b2c4cf" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.3"><text x="75" y="69">SURFACE</text><text x="380" y="265">ROD</text><text x="402" y="280">STRING</text><text x="399" y="329">DOWNHOLE</text><text x="399" y="342">PUMP</text></g>
+              <g stroke="#91a9b8" stroke-width="1" opacity=".9"><path d="M374 278h22M374 325h22"/></g>
+              <path d="M40 250h265" stroke="#eebc52" stroke-dasharray="3 6" opacity=".8"/>
+              <circle cx="90" cy="278" r="26" stroke="#eebc52" stroke-opacity=".6"/><circle cx="90" cy="278" r="15" stroke="#eebc52" stroke-opacity=".55"/><path d="M90 258v40M70 278h40" stroke="#eebc52" opacity=".45"/>
+            </svg>
+          </div>
+          <div class="panel-bottom"><span>Keep production moving.</span><span aria-hidden="true">⌁ ↗</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip" aria-label="Key areas served">
+      <div class="container strip-inner"><div class="strip-lead">More than a pump shop.</div><div class="strip-items"><span>Pumps</span><span>Anchors</span><span>Tubulars</span><span>Rod Strings</span></div></div>
+    </div>
+
+    <section class="services" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow" style="color:#a57c31">What we work with</div>
+          <h2 id="services-heading">The equipment. The details. The solution.</h2>
+          <p>Production work takes more than finding a part number. GPS brings practical equipment knowledge, shop service, sourcing, and coordination to the problems operators face every day.</p>
+        </div>
+        <div class="cards">
+          <article class="service-card"><div class="number">01 / EQUIPMENT</div><div class="service-icon"><svg viewBox="0 0 32 32"><path d="M12 3v26M20 3v26M8 6h16M8 26h16M12 10h8M12 22h8M9 15h14M9 18h14"/></svg></div><h3>Downhole Pumps</h3><p>Pump inspection, troubleshooting, teardown, rebuilding, and related parts for rod-pumped wells.</p></article>
+          <article class="service-card"><div class="number">02 / EQUIPMENT</div><div class="service-icon"><svg viewBox="0 0 32 32"><path d="M14 3v26M18 3v26M11 10l-5-3-3 4 8 6M21 10l5-3 3 4-8 6M11 22l-5 3-3-4 8-6M21 22l5 3 3-4-8-6"/></svg></div><h3>Tubing Anchors</h3><p>Tubing-anchor equipment and rebuild/exchange support, including practical handling of field-returned components.</p></article>
+          <article class="service-card"><div class="number">03 / MATERIALS</div><div class="service-icon"><svg viewBox="0 0 32 32"><ellipse cx="11" cy="6" rx="5" ry="3"/><ellipse cx="21" cy="6" rx="5" ry="3"/><path d="M6 6v20c0 2 10 2 10 0V6M16 6v20c0 2 10 2 10 0V6"/></svg></div><h3>Tubulars</h3><p>Production tubing and related tubular components, with attention to sizes, connections, and field requirements.</p></article>
+          <article class="service-card"><div class="number">04 / MATERIALS</div><div class="service-icon"><svg viewBox="0 0 32 32"><path d="M8 4v24M16 4v24M24 4v24M4 8h8M12 16h8M20 24h8"/><circle cx="8" cy="4" r="2"/><circle cx="16" cy="28" r="2"/><circle cx="24" cy="4" r="2"/></svg></div><h3>Rod Strings</h3><p>Rod-string equipment and related hardware, with support identifying and sourcing what a particular job calls for.</p></article>
+          <article class="service-card"><div class="number">05 / FIELD SUPPORT</div><div class="service-icon"><svg viewBox="0 0 32 32"><path d="M3 11h18v13H3zM21 15h5l4 5v4h-9zM7 24a3 3 0 1 0 6 0M23 24a3 3 0 1 0 6 0"/></svg></div><h3>Supply & Logistics</h3><p>Parts sourcing, vendor coordination, equipment pickup, deliveries, and support between the shop and the wellsite.</p></article>
+          <article class="service-card"><div class="number">06 / PROBLEM-SOLVING</div><div class="service-icon"><svg viewBox="0 0 32 32"><path d="M4 23l9-9 6 5 9-12M22 7h6v6"/><path d="M5 28h23"/></svg></div><h3>Production Solutions</h3><p>Help sorting through equipment issues, nonstandard requirements, and practical options for challenging well conditions.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="value" id="approach" aria-labelledby="approach-heading">
+      <div class="container value-grid">
+        <div><div class="eyebrow" style="color:#a57c31">How GPS works</div><h2 id="approach-heading">Start with the problem. Work toward the answer.</h2><div class="vertical-rule"></div><p>Every well has its own equipment history and operating conditions. A useful answer starts with understanding what's actually happening, then finding equipment and service options that make sense for the job.</p></div>
+        <div class="steps">
+          <div class="step"><span class="step-index">01</span><div><h3>Tell us what you're dealing with.</h3><p>Share the equipment, specifications, and the issue you're trying to solve.</p></div></div>
+          <div class="step"><span class="step-index">02</span><div><h3>Work through the options.</h3><p>We help identify relevant parts, shop work, and equipment considerations.</p></div></div>
+          <div class="step"><span class="step-index">03</span><div><h3>Get the next steps moving.</h3><p>Coordinate the applicable sourcing, repair, exchange, pickup, or delivery.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="container about-grid">
+        <div><div class="eyebrow" style="color:#a57c31">About GPS</div><h2 id="about-heading">General Production Solutions.<br>Exactly what the name says.</h2><p>GPS works across the practical details of oilfield production equipment: pumps, tubing anchors, tubulars, rod strings, and related components. The work connects shop-floor experience with the realities of field operations.</p><p>Whether the immediate need is a pump rebuild, a tubing-anchor exchange, a particular piece of tubing, or help tracking down the right parts, GPS focuses on solving the equipment problem in front of you.</p></div>
+        <aside class="about-aside"><div class="eyebrow">Our guiding idea</div><blockquote>“Let GPS guide the way.”</blockquote><small>Useful answers start with understanding the equipment and the conditions it has to work in.</small></aside>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-inner"><div><div class="eyebrow gold">Let's talk production</div><h2 id="contact-heading">Have an equipment question?<br><span class="gold">Start with GPS.</span></h2><p>Tell us what you're working on and what equipment you need. The right conversation starts with the details.</p><a href="#services" class="btn btn-ghost" style="margin-top:16px">Review Capabilities <span aria-hidden="true">↑</span></a></div>
+        <div class="contact-card"><h3>Contact General Production Solutions</h3><p>This website draft is ready for your verified business contact information before publishing.</p><div class="pending"><span><strong>Phone:</strong> To be added</span><span><strong>Email:</strong> To be added</span><span><strong>Service area:</strong> To be confirmed</span></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><div><strong>GPS</strong> &nbsp; General Production Solutions</div><div>© 2026 General Production Solutions. All rights reserved.</div><a href="#top">Back to top ↑</a></div></footer>
+  <div class="draft-note"><strong>PREVIEW DRAFT:</strong> Contact information, service territory, photography, brand marks, and all commercial claims should be confirmed before this site is published.</div>
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open navigation');
+    }));
+  </script>
+</body>
+</html>
